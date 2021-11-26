@@ -4,7 +4,9 @@
   "description": "No description yet",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "frontend": "npm start --prefix frontend",
+    "backend": "npm start --prefix backend",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/dandelarge/delivery-menu/issues"
   },
-  "homepage": "https://github.com/dandelarge/delivery-menu#readme"
+  "homepage": "https://github.com/dandelarge/delivery-menu#readme",
+  "dependencies": {
+    "concurrently": "^6.4.0"
+  }
 }
