@@ -1,0 +1,19 @@
+{
+  "name": "delivery-menu",
+  "version": "1.0.0",
+  "description": "No description yet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandelarge/delivery-menu.git"
+  },
+  "author": "denial",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dandelarge/delivery-menu/issues"
+  },
+  "homepage": "https://github.com/dandelarge/delivery-menu#readme"
+}
