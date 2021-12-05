@@ -1,0 +1,24 @@
+{
+    "users": [
+        {
+            "name": " Dani ",
+            "created-at": "Sun Dec 05 2021 14:02:03 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 05 2021 14:02:03 GMT+0100 (Central European Standard Time)",
+            "id": "f5561b35-c35e-48a1-bc87-4a62b4a45bbd"
+        },
+        {
+            "name": "Dani",
+            "password": "$2b$10$ndqBMLgJp3dmg./2CG2WkeKXQS.sAD0Dk.a8GSsGAPzZUIr0quWay",
+            "created-at": "Sun Dec 05 2021 16:54:47 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 05 2021 16:54:47 GMT+0100 (Central European Standard Time)",
+            "id": "561c8702-aaac-4159-a1c0-c8eb211aa8a0"
+        },
+        {
+            "name": "mine",
+            "password": "$2b$10$HSAK9eodYuhe6E6/vFYW0urC/gDSYcSoDJ5ZclfO1s8nZQnHvROtG",
+            "created-at": "Sun Dec 05 2021 18:02:20 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 05 2021 18:02:20 GMT+0100 (Central European Standard Time)",
+            "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+        }
+    ]
+}

@@ -1,8 +1,11 @@
 import { Module } from '@nestjs/common';
+import { DbModule } from 'src/db/db.module';
+import { DbService } from 'src/db/db.service';
 import { UsersService } from './users.service';
 
 @Module({
-  providers: [UsersService, {provide: 'DbName', useValue: 'users'}],
+  imports: [DbModule.forRoot('users')],
+  providers: [UsersService],
   exports: [UsersService]
 })
 export class UsersModule {}

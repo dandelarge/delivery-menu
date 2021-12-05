@@ -1,3 +1,4 @@
 export class AddUserDTO {
-  name: string
+  name: string;
+  password: string;
 }

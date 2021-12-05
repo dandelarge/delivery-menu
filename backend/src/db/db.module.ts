@@ -1,8 +1,13 @@
 import { Module } from '@nestjs/common';
-import { DbLowService } from './db-low/db-low.service';
+import { DbService } from './db.service';
 
-@Module({
-  providers: [DbLowService],
-  exports: [DbLowService]
-})
-export class DbModule {}
+@Module({})
+export class DbModule {
+  static forRoot(dbFilename: string) {
+    return {
+      module: DbModule,
+      providers: [{provide: 'db-filename', useValue: dbFilename}, DbService],
+      exports: [DbService]
+    }
+  }
+}
