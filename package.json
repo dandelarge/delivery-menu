@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "frontend": "npm start --prefix frontend",
-    "backend": "npm start --prefix backend",
-    "start": "concurrently \"npm run backend\" \"npm run frontend\""
+    "backend": "npm run start:dev --prefix backend",
+    "start:concurrently": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "start:pm2": "pm2 start ecosystem.config.js"
   },
   "repository": {
     "type": "git",
