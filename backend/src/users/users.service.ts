@@ -25,6 +25,10 @@ export class UsersService {
     return this.db.get('users', username, 'name');
   }
 
+  findById(id: string): UserDBModel {
+    return this.db.get('users', id, 'id');
+  }
+
   update(name: string, data: Partial<UserDBModel>) {
     return this.db.update('users', data, name, 'name');
   }

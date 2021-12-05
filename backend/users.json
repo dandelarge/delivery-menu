@@ -17,8 +17,25 @@
             "name": "mine",
             "password": "$2b$10$HSAK9eodYuhe6E6/vFYW0urC/gDSYcSoDJ5ZclfO1s8nZQnHvROtG",
             "created-at": "Sun Dec 05 2021 18:02:20 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Sun Dec 05 2021 18:02:20 GMT+0100 (Central European Standard Time)",
-            "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+            "last-updated": "Sun Dec 05 2021 19:19:18 GMT+0100 (Central European Standard Time)",
+            "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+            "role": "handler"
+        },
+        {
+            "name": "nati",
+            "password": "$2b$10$6oud2bnqYGhBbn4pfmjYsOmAuQzd4XS37c05AZPEChg87IkqVwEq.",
+            "role": "customer",
+            "created-at": "Sun Dec 05 2021 20:53:42 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 05 2021 20:53:42 GMT+0100 (Central European Standard Time)",
+            "id": "6b685af4-88cc-4a1d-a4ae-41ea4fcf44cc"
+        },
+        {
+            "name": "dani",
+            "password": "$2b$10$Bw8KIqO/un5brS4X/SQwquZ.O7Dqr2kE1QZD3JeBobtGUU5SFiVLS",
+            "role": "customer",
+            "created-at": "Sun Dec 05 2021 20:55:42 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 05 2021 20:55:42 GMT+0100 (Central European Standard Time)",
+            "id": "c3a83641-bd6f-4a3e-b000-301e41cff943"
         }
     ]
 }
