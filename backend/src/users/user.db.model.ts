@@ -7,6 +7,5 @@ export enum UserRole {
 export interface UserDBModel extends IdentityData {
   name: string;
   password: string;
-  token?: string;
   role: UserRole
 }
