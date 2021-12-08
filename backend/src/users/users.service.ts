@@ -5,6 +5,8 @@ import { UserDBModel } from './user.db.model';
 import { hash, compare } from 'bcrypt';
 export interface UserModel {
   name: string;
+  id: string;
+  role?: string;
 }
 
 @Injectable()

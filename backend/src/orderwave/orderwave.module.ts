@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { OrderWaveService } from './order-wave.service';
-import { OrderWaveController } from './order-wave.controller';
+import { OrderWaveService } from './orderwave.service';
+import { OrderWaveController } from './orderwave.controller';
 import { DbModule } from 'src/db/db.module';
 
 @Module({

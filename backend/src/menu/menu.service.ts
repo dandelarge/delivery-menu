@@ -1,49 +1,37 @@
 import { Injectable } from '@nestjs/common';
+import { DbService } from 'src/db/db.service';
+import { OrderWaveService } from 'src/order-wave/order-wave.service';
 import { CreateMenuDto } from './dto/create-menu.dto';
 import { UpdateMenuDto } from './dto/update-menu.dto';
-const menu = [
-  {
-    id: '1',
-    name: 'hash',
-    price: 10.5
-  },{
-    id: '2',
-    name: 'gorilla weed',
-    price: 7
-  },{
-    id: '3',
-    name: 'strong shit',
-    price: 8.5
-  },{
-    id: '4',
-    name: 'the less strong shit',
-    price: 15
-  },{
-    id: '5',
-    name: 'the fuck is this',
-    price: 14
-  },{
-    id: '6',
-    name: 'im tired',
-    price: 20
-  },{
-    id: '7',
-    name: 'of writing',
-    price: 22
-  }
-];
+
+export interface MenuItem {
+  name: string;
+  price: number;
+}
+export interface MenuModel {
+  items: MenuItem[],
+  orderwaveId: string;
+}
 @Injectable()
 export class MenuService {
-  create(createMenuDto: CreateMenuDto) {
-    return 'This action adds a new menu';
+
+  constructor(private readonly db: DbService) {}
+
+  create(menu: CreateMenuDto) {
+    return this.db.add('menus', menu);
   }
 
   findAll() {
-    return JSON.stringify(menu);
+    return this.db.getAll('menus');
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} menu`;
+  findLatest() {
+    const menus = this.db.getAll('menus');
+    return menus[menus.length - 1];
+  }
+
+  findOne(id: string) {
+    return this.db.get('menus', id, 'id');
   }
 
   update(id: number, updateMenuDto: UpdateMenuDto) {

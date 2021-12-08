@@ -36,6 +36,22 @@
             "created-at": "Sun Dec 05 2021 20:55:42 GMT+0100 (Central European Standard Time)",
             "last-updated": "Sun Dec 05 2021 20:55:42 GMT+0100 (Central European Standard Time)",
             "id": "c3a83641-bd6f-4a3e-b000-301e41cff943"
+        },
+        {
+            "name": "vero",
+            "password": "$2b$10$9K2.iaeGt7hZV3WjpnZ/eec3GWs9JUGE8htjz7wxN.nnAAFngFpS.",
+            "role": "handler",
+            "created-at": "Wed Dec 08 2021 21:13:43 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Wed Dec 08 2021 21:13:43 GMT+0100 (Central European Standard Time)",
+            "id": "bd2923dd-9a0d-4a00-a728-1d0a6dba769a"
+        },
+        {
+            "name": "vero",
+            "password": "$2b$10$R6G6xS7jiCnzVBymd/JJA.dKZp1qgMx6XNXiKEtL9gzzn3E8eeDqG",
+            "role": "handler",
+            "created-at": "Wed Dec 08 2021 21:15:40 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Wed Dec 08 2021 21:15:40 GMT+0100 (Central European Standard Time)",
+            "id": "b22e88a0-a90e-4f66-8066-c0d5e6fa7600"
         }
     ]
 }

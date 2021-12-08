@@ -6,7 +6,6 @@ import { JwtAuthGuard } from './auth/jwt-auth.guard';
 import { LocalAuthGuard } from './auth/local-auth.guard';
 import { Roles } from './auth/roles.decorator';
 import { AddUserDTO } from './DTOs/AddUser.dto';
-import { UserLoginDTO } from './DTOs/UserLogin.dto';
 import { UserDBModel } from './users/user.db.model';
 import { UsersService } from './users/users.service';
 
@@ -32,7 +31,7 @@ export class AppController {
   @Roles('handler')
   @Get('users')
   getAllUsers(@Request() req) {
-    console.log(req.user);
+    console.log('HIIIIIIII', req.user);
     return this.userService.getAllUsers();
   }
 

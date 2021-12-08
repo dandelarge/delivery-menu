@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, Request, UseGuards } from '@nestjs/common';
-import { OrderWaveService } from './order-wave.service';
+import { OrderWaveService } from './orderwave.service';
 import { CreateOrderWaveDto } from './dto/create-order-wave.dto';
 import { UpdateOrderWaveDto } from './dto/update-order-wave.dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';

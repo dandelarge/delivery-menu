@@ -29,7 +29,7 @@ export class DbService {
     return this.db.getObject<T>(`/${path}[${index}]`);
   }
 
-  add(path: string, data: any): void {
+  add<T>(path: string, data: T | any): T | any {
     const id = uuid();
     const createdAt = new Date().toString();
     const creationInfo = {
@@ -39,9 +39,11 @@ export class DbService {
     };
     const dataWithId = {...data, ...creationInfo};
     try {
-      return this.db.push(`/${path}[]`, dataWithId, true);
+      this.db.push(`/${path}[]`, dataWithId, true);
+      return dataWithId;
     } catch (e) {
-      return this.db.push(`/${path}[0]`, dataWithId, true);
+      this.db.push(`/${path}[0]`, dataWithId, true);
+      return dataWithId;
     }
   }
 

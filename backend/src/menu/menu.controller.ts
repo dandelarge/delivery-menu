@@ -13,13 +13,13 @@ export class MenuController {
   }
 
   @Get()
-  findAll() {
-    return this.menuService.findAll();
+  findLatest() {
+    return this.menuService.findLatest();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.menuService.findOne(+id);
+    return this.menuService.findOne(id);
   }
 
   @Patch(':id')
