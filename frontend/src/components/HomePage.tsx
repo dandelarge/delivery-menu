@@ -1,7 +1,6 @@
-import { Box, Button, Card, CardActions, CardContent, Link, Typography } from '@mui/material';
 import React from 'react';
+import { Button, Card, CardActions, CardContent, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import { CenterVertically } from './CenterVertically';
 
 export function HomePage() {
   return (<>

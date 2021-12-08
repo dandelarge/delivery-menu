@@ -2,7 +2,7 @@ import { Button, Card, Container, Stack, TextField } from '@mui/material';
 import { Box } from '@mui/system';
 import React, {useEffect, useState} from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useAuth } from '../App';
+import { useAuth } from '../providers/auth-provider';
 
 export const Login = () => {
   const [user, setUser] = useState('');

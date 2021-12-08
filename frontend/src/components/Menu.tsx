@@ -1,38 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IconButton, MenuItem, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
-import { Add, Delete, Remove } from '@mui/icons-material';
+import { AddCircle, RemoveCircle } from '@mui/icons-material';
+import { client } from '../api-client';
 
-const menuList: MenuItem[] = [
-  {
-    id: '1',
-    name: 'hash',
-    price: 10.5
-  },{
-    id: '2',
-    name: 'gorilla weed',
-    price: 7
-  },{
-    id: '3',
-    name: 'strong shit',
-    price: 8.5
-  },{
-    id: '4',
-    name: 'the less strong shit',
-    price: 15
-  },{
-    id: '5',
-    name: 'the fuck is this',
-    price: 14
-  },{
-    id: '6',
-    name: 'im tired',
-    price: 20
-  },{
-    id: '7',
-    name: 'of writing',
-    price: 22
-  }
-];
+const menuList: MenuItem[] = [];
 
 export interface MenuItem {
   id: string;
@@ -61,10 +32,10 @@ const DataRow = ({id, name, price}: MenuItem) => {
       <TableCell align="center"> {price} </TableCell>
       <TableCell sx={{textAlign: 'right', minWidth: '8em'}}>
         <IconButton color="primary">
-          <Remove></Remove>
+          <RemoveCircle></RemoveCircle>
         </IconButton>
         <IconButton color="primary">
-          <Add></Add>
+          <AddCircle></AddCircle>
         </IconButton>
       </TableCell>
   </TableRow>)
@@ -72,6 +43,12 @@ const DataRow = ({id, name, price}: MenuItem) => {
 
 export const Menu = () => {
   const [menu, setMenu] = useState(menuList);
+
+  useEffect(() => {
+    client.get('menu').then( ({data}) => {
+      setMenu(data);
+    });
+  }, [])
 
   return (<>
     <Typography variant='h6' sx={{mt: 2, mb: 2}}>Menu 🍀🍀🍀</Typography>

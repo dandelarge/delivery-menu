@@ -1,8 +1,8 @@
+import React from 'react';
 import { AppBar, Box, Button, Container, IconButton, List, ListItem, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import React from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
-import { useAuth } from './App';
+import { useAuth } from '../providers/auth-provider';
 
 export function Layout() {
   const auth = useAuth();
