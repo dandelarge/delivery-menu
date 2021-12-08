@@ -27,7 +27,7 @@ function App() {
                     }
                   />
                   <Route
-                    path="menu"
+                    path="menu/:id"
                     element={
                       <Menu />
                     }/>

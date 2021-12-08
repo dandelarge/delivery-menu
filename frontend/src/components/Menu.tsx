@@ -2,15 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { IconButton, MenuItem, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import { AddCircle, RemoveCircle } from '@mui/icons-material';
 import { client } from '../api-client';
-
-const menuList: MenuItem[] = [];
+import { useParams } from 'react-router-dom';
 
 export interface MenuItem {
-  id: string;
   name: string;
   price: number
 };
 
+export interface MenuData {
+  items: MenuItem[];
+  id: string;
+}
 interface MenuState {
   totalPieces: number;
   totalPrice: number;
@@ -26,8 +28,8 @@ interface BbqListProps {
   menu: MenuItem[];
 }
 
-const DataRow = ({id, name, price}: MenuItem) => {
-  return (<TableRow key={id}>
+const DataRow = ({name, price}: MenuItem) => {
+  return (<TableRow>
       <TableCell> {name} </TableCell>
       <TableCell align="center"> {price} </TableCell>
       <TableCell sx={{textAlign: 'right', minWidth: '8em'}}>
@@ -42,7 +44,9 @@ const DataRow = ({id, name, price}: MenuItem) => {
 };
 
 export const Menu = () => {
-  const [menu, setMenu] = useState(menuList);
+  const [menu, setMenu] = useState<MenuData>();
+  const params = useParams();
+  console.log(params);
 
   useEffect(() => {
     client.get('menu').then( ({data}) => {
@@ -63,12 +67,11 @@ export const Menu = () => {
               </TableRow>
           </TableHead>
           <TableBody>
-              {menu.map( ({id, name, price}) => {
+              {menu?.items.map( ({name, price}) => {
                   return (<DataRow
-                      id={id}
                       name={name}
                       price={price}
-                      key={id}
+                      key={name}
                   ></DataRow>);
               })}
           </TableBody>
