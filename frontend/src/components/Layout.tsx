@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AppBar, Box, Button, Container, IconButton, List, ListItem, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../providers/auth-provider';
+import { SwipeableEdgeDrawer } from './Drawer';
+import { useOrder } from '../providers/order-provider';
+import { OrderSummary } from './OrderSumary';
 
 export function Layout() {
   const auth = useAuth();
   const navigate = useNavigate();
 
   const {userName, userId} = auth;
+
+  const { total } = useOrder();
 
   async function handleLogout() {
     await auth.logout();
@@ -39,14 +44,10 @@ export function Layout() {
         </Toolbar>
       </AppBar>
       <Container sx={{flexGrow: 1}}>
-        {/* <nav>
-          <List>
-            <ListItem><Link to="/menu" >menu</Link></ListItem>
-            <ListItem><Link to="/users" >users</Link></ListItem>
-            <ListItem><Link to="/public" >public</Link></ListItem>
-          </List>
-        </nav> */}
           <Outlet />
+          <SwipeableEdgeDrawer title={`total: ${total} €` }>
+            <OrderSummary></OrderSummary>
+          </SwipeableEdgeDrawer>
       </Container>
     </Box>
   </>);

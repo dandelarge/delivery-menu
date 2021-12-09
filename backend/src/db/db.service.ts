@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { JsonDB } from 'node-json-db';
+import { FindCallback, JsonDB } from 'node-json-db';
 import { Config } from 'node-json-db/dist/lib/JsonDBConfig';
 import { v4 as uuid } from 'uuid';
 
@@ -27,6 +27,14 @@ export class DbService {
   get<T>(path: string, searchValue: string, key: string): T {
     const index = this.db.getIndex(`/${path}`, searchValue, key);
     return this.db.getObject<T>(`/${path}[${index}]`);
+  }
+
+  find(path: string, cb: FindCallback) {
+    return this.db.find(`/${path}`, cb);
+  }
+
+  filter(path: string, cb: FindCallback) {
+    return this.db.filter(`/${path}`, cb);
   }
 
   add<T>(path: string, data: T | any): T | any {
@@ -62,3 +70,7 @@ export class DbService {
   }
 
 }
+function FindCallback(arg0: string, cb: any, FindCallback: any) {
+  throw new Error('Function not implemented.');
+}
+

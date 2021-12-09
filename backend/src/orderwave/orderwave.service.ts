@@ -14,12 +14,12 @@ export class OrderWaveService {
     private readonly db: DbService,
   ) {}
 
-  create(data: CreateOrderWaveDto, {name, id}: UserModel) {
+  create(data: CreateOrderWaveDto, {username, userId}: {username: string, userId: string}) {
     const { order_before, menu_id } = data;
     const orderWaveDBData: OrderWaveModel = {
       handler: {
-        name,
-        id
+        name: username,
+        id: userId
       },
       order_before,
       orders: [], // TODO: fetch the orders with ordersService

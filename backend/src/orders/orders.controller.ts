@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Request, UseGuards } from '@nestjs/common';
+import { Controller, Get, Patch, Post, Request, UseGuards } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { OrderModel, OrderWaveModel } from 'src/orderwave/entities/order-wave.entity';
 import { OrderWaveService } from 'src/orderwave/orderwave.service';
@@ -15,8 +15,9 @@ export class OrdersController {
   ) {}
 
   @Get()
-  findAll() {
-    return this.ordersService.findAll();
+  findAll(@Request() req) {
+    const {userId} = req.user;
+    return this.ordersService.findCurrentOrderForUser(userId);
   }
 
   @Post()
@@ -40,6 +41,17 @@ export class OrdersController {
     this.orderWaveService.updateLatest({orders: [...orders, createdOrder], summary, total});
 
     return createdOrder;
+  }
+
+  @Patch()
+  update(@Request() req) {
+    const {userId} = req.user;
+    const orderData = req.body as Partial<CreateOrderDto>;
+    const {id} = this.ordersService.findCurrentOrderForUser(userId);
+
+
+
+    return this.ordersService.update(userId, id, orderData );
   }
 
 }

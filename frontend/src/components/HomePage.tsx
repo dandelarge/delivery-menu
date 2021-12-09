@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, CardActions, CardContent, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import { client } from '../api-client';
+import { useOrderWave } from '../providers/orderwave-provider';
 
 interface OrderWaveData {
   handler: string;
@@ -49,23 +49,14 @@ function getHoursAndMinutes(date: Date) {
 }
 
 export function HomePage() {
-  // const { handler, order_before, menu_id } = orderWave;
-  const [handler, setHandler] = useState('');
-  const [menuId, setMenuId] = useState('');
-  const [dayOfTheWeek, setDayOfTheWeek] = useState('');
-  const [orderClosingTime, setOrderClosingTime] = useState('')
 
-  useEffect(() => {
-    client.get('/order-wave').then( ({data}) => {
-      setHandler(data.handler);
-      setMenuId(data.menu_id);
+  const orderWave = useOrderWave();
 
-      const orderDate = new Date(data.order_before);
-      setDayOfTheWeek(getDayNumberWord(orderDate.getDay()));
-      setOrderClosingTime(getHoursAndMinutes(orderDate));
-    });
+  const {handler, menuId, orderBefore } = orderWave;
+  const orderDate = new Date(orderBefore || '');
+  const dayOfTheWeek = getDayNumberWord(orderDate.getDay());
+  const orderClosingTime = getHoursAndMinutes(orderDate);
 
-  }, []);
 
   return (<>
     <Typography variant="h6" sx={{mb: 2, mt: 2}}>Home Page</Typography>

@@ -147,28 +147,28 @@
             "items": [
                 {
                     "item": "Gelatto",
-                    "qty": 2,
-                    "subtotal": 15
+                    "qty": 4,
+                    "subtotal": 30
                 },
                 {
-                    "item": "Super Pollen",
-                    "qty": 2,
-                    "subtotal": 24
-                },
-                {
-                    "item": "Amnesia",
-                    "qty": 1,
-                    "subtotal": 17
-                },
-                {
-                    "item": "something else",
+                    "item": "Weding Cake",
                     "qty": 5,
-                    "subtotal": 85
+                    "subtotal": 37.5
+                },
+                {
+                    "item": "AMG",
+                    "qty": 1,
+                    "subtotal": 11
+                },
+                {
+                    "item": "Super Silver Haze",
+                    "qty": 1,
+                    "subtotal": 8.5
                 }
             ],
-            "total": 141,
+            "total": 87,
             "created-at": "Thu Dec 09 2021 00:43:59 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Thu Dec 09 2021 00:43:59 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 09 2021 06:22:14 GMT+0100 (Central European Standard Time)",
             "id": "a89843ea-1be9-4701-bcfe-6807d659361b"
         },
         {
@@ -234,6 +234,39 @@
             "created-at": "Thu Dec 09 2021 01:36:11 GMT+0100 (Central European Standard Time)",
             "last-updated": "Thu Dec 09 2021 01:36:11 GMT+0100 (Central European Standard Time)",
             "id": "03450212-300d-4ba8-af86-c0d9560c0531"
+        },
+        {
+            "user": {
+                "userId": "6b685af4-88cc-4a1d-a4ae-41ea4fcf44cc",
+                "username": "nati",
+                "role": "customer"
+            },
+            "items": [
+                {
+                    "item": "Melonesia",
+                    "qty": 14,
+                    "subtotal": 252
+                },
+                {
+                    "item": "Gelatto",
+                    "qty": 6,
+                    "subtotal": 45
+                },
+                {
+                    "item": "Bubble Gum",
+                    "qty": 1,
+                    "subtotal": 22
+                },
+                {
+                    "item": "Super Silver Haze",
+                    "qty": 1,
+                    "subtotal": 8.5
+                }
+            ],
+            "total": 327.5,
+            "created-at": "Thu Dec 09 2021 01:41:50 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 09 2021 06:30:28 GMT+0100 (Central European Standard Time)",
+            "id": "650b3795-20de-4223-bf32-c63cd7eb57cb"
         }
     ]
 }

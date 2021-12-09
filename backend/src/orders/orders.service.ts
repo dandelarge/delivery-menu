@@ -10,7 +10,8 @@ export class OrdersService {
 
   constructor(
     private readonly dbService: DbService,
-    private readonly menuService: MenuService
+    private readonly menuService: MenuService,
+    private readonly orderWaveService: OrderWaveService
   ) {}
 
   findAll() {
@@ -34,10 +35,26 @@ export class OrdersService {
 
   create(orderData: OrderModel) {
     const menu = this.menuService.findLatest() as MenuModel;
-    console.log(orderData);
     const [updatedOrderItems, orderTotal] = this.calculateTotal(orderData.items, menu.items);
     const calculatedData: OrderModel = {...orderData, items: updatedOrderItems, total: orderTotal};
     return  this.dbService.add<OrderModel>('orders', calculatedData);
+  }
+
+  findCurrentOrderForUser(id: string): OrderModel {
+    const userOrders = this.dbService.filter('orders', (item => item.user.userId === id)) as OrderModel[];
+    return userOrders[userOrders.length - 1];
+  }
+
+  update(userId: string, id: string, orderData: Partial<OrderModel>) {
+    const menu = this.menuService.findLatest() as MenuModel;
+    const [updatedOrderItems, orderTotal] = this.calculateTotal(orderData.items, menu.items);
+    const currentUserOrder = this.findCurrentOrderForUser(userId);
+    const updatedOrder: OrderModel = {
+      ...currentUserOrder,
+      items: updatedOrderItems,
+      total: orderTotal
+    };
+    return this.dbService.update('orders', updatedOrder, id, 'id');
   }
 
 }
