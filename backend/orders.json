@@ -8,17 +8,24 @@
             },
             "items": [
                 {
-                    "qty": 5,
-                    "item": "gorilla glue"
+                    "item": "AMG",
+                    "qty": 2,
+                    "subtotal": 22
                 },
                 {
-                    "qty": 3,
-                    "item": "Amnesia"
+                    "item": "Super Pollen",
+                    "qty": 2,
+                    "subtotal": 24
+                },
+                {
+                    "item": "Super Silver Haze",
+                    "qty": 1,
+                    "subtotal": 8.5
                 }
             ],
-            "total": 103.5,
+            "total": 54.5,
             "created-at": "Wed Dec 08 2021 23:41:10 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Wed Dec 08 2021 23:41:10 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 09 2021 23:38:04 GMT+0100 (Central European Standard Time)",
             "id": "1177ac7d-680b-4559-9dfb-b6885e719870"
         },
         {
@@ -154,11 +161,16 @@
                     "item": "Weding Cake",
                     "qty": 1,
                     "subtotal": 7.5
+                },
+                {
+                    "item": "gorilla glue",
+                    "qty": 1,
+                    "subtotal": 10.5
                 }
             ],
-            "total": 37.5,
+            "total": 48,
             "created-at": "Thu Dec 09 2021 00:43:59 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Thu Dec 09 2021 07:17:51 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 09 2021 19:19:51 GMT+0100 (Central European Standard Time)",
             "id": "a89843ea-1be9-4701-bcfe-6807d659361b"
         },
         {
@@ -239,8 +251,8 @@
                 },
                 {
                     "item": "Gelatto",
-                    "qty": 6,
-                    "subtotal": 45
+                    "qty": 7,
+                    "subtotal": 52.5
                 },
                 {
                     "item": "Bubble Gum",
@@ -249,13 +261,28 @@
                 },
                 {
                     "item": "Super Silver Haze",
+                    "qty": 2,
+                    "subtotal": 17
+                },
+                {
+                    "item": "gorilla glue",
                     "qty": 1,
-                    "subtotal": 8.5
+                    "subtotal": 10.5
+                },
+                {
+                    "item": "Amnesia",
+                    "qty": 1,
+                    "subtotal": 17
+                },
+                {
+                    "item": "Super Pollen",
+                    "qty": 1,
+                    "subtotal": 12
                 }
             ],
-            "total": 327.5,
+            "total": 383,
             "created-at": "Thu Dec 09 2021 01:41:50 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Thu Dec 09 2021 06:43:32 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 09 2021 23:16:53 GMT+0100 (Central European Standard Time)",
             "id": "650b3795-20de-4223-bf32-c63cd7eb57cb"
         }
     ]

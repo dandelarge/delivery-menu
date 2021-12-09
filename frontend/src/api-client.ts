@@ -9,7 +9,7 @@ export function setAccessTokenInLocalStorage(token: string) {
 }
 
 const baseConfig: Partial<AxiosRequestConfig> = {
-  baseURL:'http://localhost:3012/',
+  baseURL:'http://192.168.1.14:3012/',
   timeout: 1000
 };
 

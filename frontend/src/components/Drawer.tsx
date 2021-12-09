@@ -9,7 +9,7 @@ import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 
-const drawerBleeding = 56;
+const drawerBleeding = 112;
 
 interface Props {
   children: JSX.Element;

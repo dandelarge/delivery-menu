@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card, CardActions, CardContent, Typography } from '@mui/material';
+import { Accordion, AccordionSummary, AccordionDetails, Box, Button, Card, CardActions, CardContent, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { useOrderWave } from '../providers/orderwave-provider';
+import { ExpandMore } from '@mui/icons-material';
 
 interface OrderWaveData {
   handler: string;
@@ -51,6 +52,7 @@ function getHoursAndMinutes(date: Date) {
 export function HomePage() {
 
   const orderWave = useOrderWave();
+  const {orders} = orderWave;
 
   const {handler, menuId, orderBefore } = orderWave;
   const orderDate = new Date(orderBefore || '');
@@ -60,7 +62,7 @@ export function HomePage() {
 
   return (<>
     <Typography variant="h6" sx={{mb: 2, mt: 2}}>Home Page</Typography>
-      <Card>
+      <Card sx={{mb: 2}}>
         <CardContent>
           <Typography variant="h6" component="div">{handler} is ordering on {dayOfTheWeek}</Typography>
           <Typography variant="body1"> Order before {orderClosingTime}</Typography>
@@ -70,6 +72,29 @@ export function HomePage() {
               Check the menu out
           </Button>
         </CardActions>
+      </Card>
+      <Card>
+        <CardContent>
+          <Typography variant="h6"> These people are ordering:</Typography>
+          {orders?.map( order => {
+            return (<Box sx={{mb: 2, mt:2}}>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMore/>}
+                  >
+                  <Typography variant="body1" component="div" color="secondary">{order.user?.username}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  {order.items?.map( item => (<Box >
+                    <Typography variant="caption" color="primary"> {item.qty} g</Typography>
+                    <Box sx={{m:1}} component="span">-</Box>
+                    <Typography variant="caption" color="primary"> {item.item} </Typography>
+                  </Box>))}
+                </AccordionDetails>
+              </Accordion>
+            </Box>);
+          })}
+        </CardContent>
       </Card>
   </>);
 }

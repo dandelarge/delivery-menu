@@ -10,6 +10,7 @@ export interface OrderItem {
 export interface UserModel {
   name?: string;
   id?: string;
+  username?: string;
 }
 
 export interface OrderModel {

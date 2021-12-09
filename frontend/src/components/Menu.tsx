@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { IconButton, MenuItem, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
-import { AddCircle, RemoveCircle } from '@mui/icons-material';
+import { Add, AddCircle, Remove, RemoveCircle } from '@mui/icons-material';
 import { client } from '../api-client';
 import { OrderItem, useOrder } from '../providers/order-provider';
 
@@ -31,10 +31,10 @@ const DataRow = ({
       <TableCell align="center"> {price} </TableCell>
       <TableCell sx={{textAlign: 'right', minWidth: '8em'}}>
         <IconButton onClick={() => onRemove(name)} color="primary">
-          <RemoveCircle></RemoveCircle>
+          <Remove></Remove>
         </IconButton>
         <IconButton onClick={() => onAdd(name)} color="primary">
-          <AddCircle ></AddCircle>
+          <Add></Add>
         </IconButton>
       </TableCell>
   </TableRow>)
