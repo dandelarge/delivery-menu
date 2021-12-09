@@ -6,8 +6,9 @@ import { OrdersController } from './orders.controller';
 import { OrdersService } from './orders.service';
 
 @Module({
-  imports: [DbModule.forRoot('orders'), MenuModule],
+  imports: [DbModule.forRoot('orders'), MenuModule, OrderWaveModule],
   controllers: [OrdersController],
-  providers: [OrdersService]
+  providers: [OrdersService],
+  exports: [OrdersService]
 })
 export class OrdersModule {}

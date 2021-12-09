@@ -47,13 +47,231 @@
                 "id": "c3a83641-bd6f-4a3e-b000-301e41cff943"
             },
             "order_before": "Dec 20 2021 20:00:00 GMT+0100 (Central European Standard Time)",
-            "orders": [],
+            "orders": [
+                {
+                    "user": {
+                        "userId": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+                        "username": "mine",
+                        "role": "handler"
+                    },
+                    "items": [
+                        {
+                            "item": "AMG",
+                            "qty": 2
+                        },
+                        {
+                            "item": "gorilla glue",
+                            "qty": 2
+                        }
+                    ]
+                },
+                {
+                    "user": {
+                        "userId": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+                        "username": "mine",
+                        "role": "handler"
+                    },
+                    "items": [
+                        {
+                            "item": "Gelatto",
+                            "qty": 2,
+                            "subtotal": 15
+                        },
+                        {
+                            "item": "Super Pollen",
+                            "qty": 2,
+                            "subtotal": 24
+                        },
+                        {
+                            "item": "Amnesia",
+                            "qty": 1,
+                            "subtotal": 17
+                        },
+                        {
+                            "item": "something else",
+                            "qty": 5,
+                            "subtotal": 85
+                        }
+                    ],
+                    "total": 141,
+                    "created-at": "Thu Dec 09 2021 00:40:15 GMT+0100 (Central European Standard Time)",
+                    "last-updated": "Thu Dec 09 2021 00:40:15 GMT+0100 (Central European Standard Time)",
+                    "id": "eddb9606-74a3-4a44-bee4-7e14998eac0e"
+                }
+            ],
             "summary": [],
-            "total": 0,
+            "total": 145,
             "menu_id": "0faee60d-9b6b-4a0f-90b8-54b61e9d8438",
-            "created-at": "Wed Dec 08 2021 21:05:04 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Wed Dec 08 2021 21:05:04 GMT+0100 (Central European Standard Time)",
-            "id": "762b00af-c06d-4714-b68c-ab469f36c2e4"
+            "created-at": "Thu Dec 09 2021 00:33:55 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 09 2021 00:40:15 GMT+0100 (Central European Standard Time)",
+            "id": "f952cfa3-98b6-4c4d-ace6-ae26a3099519",
+            "user": {
+                "userId": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+                "username": "mine",
+                "role": "handler"
+            },
+            "items": [
+                {
+                    "item": "AMG",
+                    "qty": 2,
+                    "subtotal": 22
+                },
+                {
+                    "item": "gorilla glue",
+                    "qty": 2,
+                    "subtotal": 21
+                },
+                {
+                    "item": "Amnesia",
+                    "qty": 1,
+                    "subtotal": 17
+                },
+                {
+                    "item": "something else",
+                    "qty": 5,
+                    "subtotal": 85
+                }
+            ]
+        },
+        {
+            "handler": {},
+            "order_before": "Dec 20 2021 20:00:00 GMT+0100 (Central European Standard Time)",
+            "orders": [
+                {
+                    "user": {
+                        "userId": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+                        "username": "mine",
+                        "role": "handler"
+                    },
+                    "items": [
+                        {
+                            "item": "Gelatto",
+                            "qty": 2,
+                            "subtotal": 15
+                        },
+                        {
+                            "item": "Super Pollen",
+                            "qty": 2,
+                            "subtotal": 24
+                        },
+                        {
+                            "item": "Amnesia",
+                            "qty": 1,
+                            "subtotal": 17
+                        },
+                        {
+                            "item": "something else",
+                            "qty": 5,
+                            "subtotal": 85
+                        }
+                    ],
+                    "total": 141,
+                    "created-at": "Thu Dec 09 2021 00:43:59 GMT+0100 (Central European Standard Time)",
+                    "last-updated": "Thu Dec 09 2021 00:43:59 GMT+0100 (Central European Standard Time)",
+                    "id": "a89843ea-1be9-4701-bcfe-6807d659361b"
+                },
+                {
+                    "user": {
+                        "userId": "6b685af4-88cc-4a1d-a4ae-41ea4fcf44cc",
+                        "username": "nati",
+                        "role": "customer"
+                    },
+                    "items": [
+                        {
+                            "item": "Super Pollen",
+                            "qty": 2,
+                            "subtotal": 24
+                        },
+                        {
+                            "item": "something else",
+                            "qty": 5,
+                            "subtotal": 85
+                        }
+                    ],
+                    "total": 109,
+                    "created-at": "Thu Dec 09 2021 00:45:05 GMT+0100 (Central European Standard Time)",
+                    "last-updated": "Thu Dec 09 2021 00:45:05 GMT+0100 (Central European Standard Time)",
+                    "id": "043fe4fa-8ca7-4080-a8df-ab9a2d328cd2"
+                },
+                {
+                    "user": {
+                        "userId": "6b685af4-88cc-4a1d-a4ae-41ea4fcf44cc",
+                        "username": "nati",
+                        "role": "customer"
+                    },
+                    "items": [
+                        {
+                            "item": "Super Pollen",
+                            "qty": 2,
+                            "subtotal": 24
+                        },
+                        {
+                            "item": "gorilla glue",
+                            "qty": 2,
+                            "subtotal": 21
+                        }
+                    ],
+                    "total": 45,
+                    "created-at": "Thu Dec 09 2021 01:24:28 GMT+0100 (Central European Standard Time)",
+                    "last-updated": "Thu Dec 09 2021 01:24:28 GMT+0100 (Central European Standard Time)",
+                    "id": "dfd8a6e1-9529-4654-89d7-c79fc2c3593d"
+                },
+                {
+                    "user": {
+                        "userId": "6b685af4-88cc-4a1d-a4ae-41ea4fcf44cc",
+                        "username": "nati",
+                        "role": "customer"
+                    },
+                    "items": [
+                        {
+                            "item": "Melonesia",
+                            "qty": 10,
+                            "subtotal": 180
+                        }
+                    ],
+                    "total": 180,
+                    "created-at": "Thu Dec 09 2021 01:36:11 GMT+0100 (Central European Standard Time)",
+                    "last-updated": "Thu Dec 09 2021 01:36:11 GMT+0100 (Central European Standard Time)",
+                    "id": "03450212-300d-4ba8-af86-c0d9560c0531"
+                }
+            ],
+            "summary": [
+                {
+                    "item": "Gelatto",
+                    "qty": 2,
+                    "subtotal": 15
+                },
+                {
+                    "item": "Super Pollen",
+                    "qty": 6,
+                    "subtotal": 72
+                },
+                {
+                    "item": "Amnesia",
+                    "qty": 1,
+                    "subtotal": 17
+                },
+                {
+                    "item": "something else",
+                    "qty": 10,
+                    "subtotal": 170
+                },
+                {
+                    "item": "gorilla glue",
+                    "qty": 2,
+                    "subtotal": 21
+                },
+                {
+                    "item": "Melonesia",
+                    "qty": 10,
+                    "subtotal": 180
+                }
+            ],
+            "total": 475,
+            "menu_id": "0faee60d-9b6b-4a0f-90b8-54b61e9d8438",
+            "created-at": "Thu Dec 09 2021 00:42:26 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 09 2021 01:36:11 GMT+0100 (Central European Standard Time)",
+            "id": "3b7c8c94-5b42-4f2b-8fba-da29ecec9992"
         }
     ]
 }

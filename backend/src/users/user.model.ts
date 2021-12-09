@@ -1,6 +1,5 @@
-export interface User {
-  id: string;
+export interface UserModel {
   name: string;
-  role: string;
-  order: any;
+  id: string;
+  role?: string;
 }
