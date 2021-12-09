@@ -152,23 +152,13 @@
                 },
                 {
                     "item": "Weding Cake",
-                    "qty": 5,
-                    "subtotal": 37.5
-                },
-                {
-                    "item": "AMG",
                     "qty": 1,
-                    "subtotal": 11
-                },
-                {
-                    "item": "Super Silver Haze",
-                    "qty": 1,
-                    "subtotal": 8.5
+                    "subtotal": 7.5
                 }
             ],
-            "total": 87,
+            "total": 37.5,
             "created-at": "Thu Dec 09 2021 00:43:59 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Thu Dec 09 2021 06:22:14 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 09 2021 07:17:51 GMT+0100 (Central European Standard Time)",
             "id": "a89843ea-1be9-4701-bcfe-6807d659361b"
         },
         {
@@ -265,7 +255,7 @@
             ],
             "total": 327.5,
             "created-at": "Thu Dec 09 2021 01:41:50 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Thu Dec 09 2021 06:30:28 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 09 2021 06:43:32 GMT+0100 (Central European Standard Time)",
             "id": "650b3795-20de-4223-bf32-c63cd7eb57cb"
         }
     ]

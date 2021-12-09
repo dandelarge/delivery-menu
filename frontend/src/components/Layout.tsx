@@ -44,7 +44,11 @@ export function Layout() {
         </Toolbar>
       </AppBar>
       <Container sx={{flexGrow: 1}}>
-          <Outlet />
+          <Box sx={{
+            mb: 8
+          }}>
+            <Outlet />
+          </Box>
           <SwipeableEdgeDrawer title={`total: ${total} €` }>
             <OrderSummary></OrderSummary>
           </SwipeableEdgeDrawer>

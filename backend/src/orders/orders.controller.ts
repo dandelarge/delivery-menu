@@ -49,9 +49,18 @@ export class OrdersController {
     const orderData = req.body as Partial<CreateOrderDto>;
     const {id} = this.ordersService.findCurrentOrderForUser(userId);
 
+    const lastWave = this.orderWaveService.findLatest() as OrderWaveModel;
+    const orders = lastWave.orders;
 
+    const createdOrder = this.ordersService.update(userId, id, orderData ) as OrderModel;
 
-    return this.ordersService.update(userId, id, orderData );
+    const updatedOrderWave = {...lastWave, orders: [...orders, createdOrder]};
+    const summary = this.orderWaveService.calcSummary(updatedOrderWave);
+    const total = this.orderWaveService.calcTotalFromSummary(summary);
+
+    this.orderWaveService.updateLatest({orders: [...orders, createdOrder], summary, total});
+
+    return createdOrder;
   }
 
 }
