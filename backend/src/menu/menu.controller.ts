@@ -2,19 +2,33 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { MenuService } from './menu.service';
 import { CreateMenuDto } from './dto/create-menu.dto';
 import { UpdateMenuDto } from './dto/update-menu.dto';
+import { OrderWaveService } from 'src/orderwave/orderwave.service';
+import { MenuModel } from './entities/menu.entity';
 
 @Controller('menu')
 export class MenuController {
-  constructor(private readonly menuService: MenuService) {}
+  constructor(private readonly menuService: MenuService, private readonly orderwaveService: OrderWaveService) {}
 
   @Post()
   create(@Body() createMenuDto: CreateMenuDto) {
-    return this.menuService.create(createMenuDto);
+    let { menu, id } = this.orderwaveService.findLatest();
+
+    if (!menu) {
+      menu = this.menuService.create(createMenuDto);
+    }
+    menu.items = createMenuDto.items;
+    this.orderwaveService.addOrUpdateMenu(id, menu);
+    this.orderwaveService.resetOrders(id);
+    return menu;
   }
 
   @Get()
   findLatest() {
-    return this.menuService.findLatest();
+    const { menu } = this.orderwaveService.findLatest();
+    if (!menu) {
+      return new Error('There\'s no menu yet :(')
+    }
+    return menu;
   }
 
   @Get(':id')
@@ -24,7 +38,9 @@ export class MenuController {
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateMenuDto: UpdateMenuDto) {
-    return this.menuService.update(+id, updateMenuDto);
+    const newMenu = this.menuService.update(id, updateMenuDto) as MenuModel;
+    const { id: orderWaveId } =  this.orderwaveService.findLatest();
+    this.orderwaveService.addOrUpdateMenu(orderWaveId, newMenu);
   }
 
   @Delete(':id')

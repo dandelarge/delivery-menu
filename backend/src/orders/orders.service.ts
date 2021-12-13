@@ -3,7 +3,7 @@ import { DbService } from 'src/db/db.service';
 import { MenuItem, MenuModel } from 'src/menu/entities/menu.entity';
 import { MenuService } from 'src/menu/menu.service';
 import { OrderWaveService } from 'src/orderwave/orderwave.service';
-import { OrderItem, OrderModel } from './entity/order.entity';
+import { CreateOrderDto, OrderItem, OrderModel } from './entity/order.entity';
 
 @Injectable()
 export class OrdersService {
@@ -34,21 +34,27 @@ export class OrdersService {
   }
 
   create(orderData: OrderModel) {
-    const menu = this.menuService.findLatest() as MenuModel;
+    const {menu} = this.orderWaveService.findLatest();
+    if (!menu) { return null}
+
     const [updatedOrderItems, orderTotal] = this.calculateTotal(orderData.items, menu.items);
     const calculatedData: OrderModel = {...orderData, items: updatedOrderItems, total: orderTotal};
     return  this.dbService.add<OrderModel>('orders', calculatedData);
   }
 
-  findCurrentOrderForUser(id: string): OrderModel {
-    const userOrders = this.dbService.filter('orders', (item => item.user.userId === id)) as OrderModel[];
-    return userOrders[userOrders.length - 1];
+  findCurrentOrderForUserWithId(id: string): OrderModel {
+    const {orders} = this.orderWaveService.findLatest();
+    console.log(orders.keys());
+
+    return orders.get(id);
   }
 
-  update(userId: string, id: string, orderData: Partial<OrderModel>) {
-    const menu = this.menuService.findLatest() as MenuModel;
+  update(userId: string, id: string, orderData: CreateOrderDto) {
+    const {menu, orders} = this.orderWaveService.findLatest();
+    if (!menu) { return null}
+
     const [updatedOrderItems, orderTotal] = this.calculateTotal(orderData.items, menu.items);
-    const currentUserOrder = this.findCurrentOrderForUser(userId);
+    const currentUserOrder = orders.get(userId);
     const updatedOrder: OrderModel = {
       ...currentUserOrder,
       items: updatedOrderItems,

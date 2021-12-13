@@ -1,6 +1,6 @@
 import { Controller, Get, Patch, Post, Request, UseGuards } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { OrderModel, OrderWaveModel } from 'src/orderwave/entities/order-wave.entity';
+import { OrderModel, OrderWave, OrderWaveModel } from 'src/orderwave/entities/order-wave.entity';
 import { OrderWaveService } from 'src/orderwave/orderwave.service';
 import { CreateOrderDto } from './entity/order.entity';
 import { OrdersService } from './orders.service';
@@ -17,50 +17,58 @@ export class OrdersController {
   @Get()
   findAll(@Request() req) {
     const {userId} = req.user;
-    return this.ordersService.findCurrentOrderForUser(userId);
+    return this.ordersService.findCurrentOrderForUserWithId(userId);
   }
 
   @Post()
   create(@Request() req) {
     const user = req.user;
     const { items } = req.body as CreateOrderDto;
+
     const order: OrderModel = {
-      user,
+      user: {
+        name: user.username,
+        id: user.userId
+      },
       items
     }
 
-    const createdOrder = this.ordersService.create(order);
+    const {id, orders} = this.orderWaveService.findLatest();
 
-    const lastWave = this.orderWaveService.findLatest() as OrderWaveModel;
-    const orders = lastWave.orders;
+    let currentUserOrder = orders.get(user.userId);
+    if(!currentUserOrder) {
+      currentUserOrder = this.ordersService.create(order);
+    }
 
-    const updatedOrderWave = {...lastWave, orders: [...orders, createdOrder]};
-    const summary = this.orderWaveService.calcSummary(updatedOrderWave);
+    const orderWaveWithOrders = this.orderWaveService.addOrUpdateOrders(id, [currentUserOrder]);
+    const summary = this.orderWaveService.calcSummary(orderWaveWithOrders);
     const total = this.orderWaveService.calcTotalFromSummary(summary);
+    this.orderWaveService.update(id, {summary, total});
 
-    this.orderWaveService.updateLatest({orders: [...orders, createdOrder], summary, total});
-
-    return createdOrder;
+    return currentUserOrder;
   }
 
   @Patch()
   update(@Request() req) {
     const {userId} = req.user;
-    const orderData = req.body as Partial<CreateOrderDto>;
-    const {id} = this.ordersService.findCurrentOrderForUser(userId);
+    const orderData = req.body as CreateOrderDto;
+    let currentOrder = this.ordersService.findCurrentOrderForUserWithId(userId);
 
-    const lastWave = this.orderWaveService.findLatest() as OrderWaveModel;
-    const orders = lastWave.orders;
 
-    const createdOrder = this.ordersService.update(userId, id, orderData ) as OrderModel;
+    if (!currentOrder) {
+      currentOrder = this.create(req);
+    }
 
-    const updatedOrderWave = {...lastWave, orders: [...orders, createdOrder]};
+    const { id: orderId } = currentOrder;
+    const updatedOrder = this.ordersService.update(userId, orderId, orderData) as OrderModel;
+
+    const {id:orderWaveId} = this.orderWaveService.findLatest();
+    const updatedOrderWave = this.orderWaveService.addOrUpdateOrders(orderWaveId, [updatedOrder]);
     const summary = this.orderWaveService.calcSummary(updatedOrderWave);
     const total = this.orderWaveService.calcTotalFromSummary(summary);
+    this.orderWaveService.update(orderWaveId, {summary, total});
 
-    this.orderWaveService.updateLatest({orders: [...orders, createdOrder], summary, total});
-
-    return createdOrder;
+    return updatedOrder
   }
 
 }

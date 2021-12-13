@@ -1,11 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { DbService } from 'src/db/db.service';
-import { OrderItem } from 'src/orders/entity/order.entity';
-import { UserModel } from 'src/users/user.model';
+import { MenuModel } from 'src/menu/entities/menu.entity';
+import { OrderItem, OrderModel } from 'src/orders/entity/order.entity';
 
 import { CreateOrderWaveDto } from './dto/create-order-wave.dto';
-import { UpdateOrderWaveDto } from './dto/update-order-wave.dto';
-import { OrderWaveModel } from './entities/order-wave.entity';
+import { OrderWave, OrderWaveModel } from './entities/order-wave.entity';
 
 @Injectable()
 export class OrderWaveService {
@@ -15,17 +14,15 @@ export class OrderWaveService {
   ) {}
 
   create(data: CreateOrderWaveDto, {username, userId}: {username: string, userId: string}) {
-    const { order_before, menu_id } = data;
-    const orderWaveDBData: OrderWaveModel = {
+    const { order_before } = data;
+    const orderWaveDBData: OrderWave = {
       handler: {
         name: username,
         id: userId
       },
       order_before,
-      orders: [], // TODO: fetch the orders with ordersService
       summary: [],
       total: 0,
-      menu_id
     }
     return this.db.add('order-waves', orderWaveDBData);
   }
@@ -34,28 +31,42 @@ export class OrderWaveService {
     return `This action returns all orderWave`;
   }
 
-  findLatest() {
-    const orderWaves = this.db.getAll('order-waves');
-    return orderWaves[ orderWaves.length - 1];
+  findLatest(): OrderWave {
+    const orderWaves = this.db.getAll('order-waves') as OrderWave[];
+    const latest = orderWaves[ orderWaves.length - 1];
+    latest.orders = new Map(latest.rawOrders);
+    return latest;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} orderWave`;
+  findOne(id: string): OrderWave {
+    const orderWave =  this.db.get('order-waves', id, 'id') as OrderWave;
+    orderWave.orders = new Map(orderWave.rawOrders);
+    return orderWave;
   }
 
-  update(id: number, updateOrderWaveDto: UpdateOrderWaveDto) {
-    return `This action updates a #${id} orderWave`;
+  update(id: string, data: Partial<OrderWave>): OrderWave {
+    const orderWave = this.findOne(id) as OrderWave;
+    if (!orderWave) {
+      return null;
+    }
+
+    const result = {...orderWave, ...data};
+    const updatedOrderWave = this.db.update('order-waves', result, id, 'id') as OrderWave;
+    updatedOrderWave.orders = new Map(updatedOrderWave.rawOrders)
+    return updatedOrderWave;
   }
 
-  updateLatest(orderWave: Partial<OrderWaveModel>) {
+  updateLatest(orderWave: Partial<OrderWaveModel>): OrderWave {
     const all = this.db.getAll('order-waves') as OrderWaveModel[];
     const latest = all[all.length - 1];
     const latestId = latest.id;
-    return this.db.update('order-waves', {...latest, ...orderWave}, latestId, 'id');
+    const updatedOrderWave = this.db.update('order-waves', {...latest, ...orderWave}, latestId, 'id') as OrderWave;
+    updatedOrderWave.orders = new Map(updatedOrderWave.rawOrders)
+    return updatedOrderWave;
   }
 
-  calcSummary(orderWave: OrderWaveModel): OrderItem[] {
-    const { orders, menu_id } = orderWave;
+  calcSummary(orderWave: OrderWave): OrderItem[] {
+    const { orders } = orderWave;
     const trackMap = new Map<string, OrderItem>();
 
     orders.forEach( order => {
@@ -79,7 +90,43 @@ export class OrderWaveService {
     return summary.reduce( (prev: number, curr) => prev + curr.subtotal, 0);
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} orderWave`;
   }
+
+  addOrUpdateMenu(id: string, menu: MenuModel): OrderWave {
+    const orderWave = this.findOne(id) as OrderWave;
+    orderWave.menu = menu;
+    return this.db.update('order-waves', orderWave, id, 'id') as OrderWave;
+  }
+
+  addOrUpdateOrders(id: string, orders: OrderModel[]): OrderWave {
+    const orderWave = this.findOne(id) as OrderWave;
+
+    let rawOrders = orderWave.rawOrders || [];
+    const ordersMap =  new Map<string, OrderModel>(rawOrders);
+
+    orders.forEach( order => ordersMap.set(order.user.id, order));
+
+    const newRawOrders = Array.from(ordersMap);
+    orderWave.rawOrders = newRawOrders;
+
+    this.db.update('order-waves', orderWave, id, 'id');
+    orderWave.orders = ordersMap;
+
+    return orderWave;
+  }
+
+  resetOrders(id: string): OrderWave {
+    const orderWave = this.findOne(id) as OrderWave;
+    orderWave.rawOrders = [];
+    orderWave.summary = [];
+    orderWave. total = 0;
+
+    const updatedOrderWave = this.db.update('order-waves', orderWave, id, 'id') as OrderWave;
+    updatedOrderWave.orders = new Map<string, OrderModel>();
+
+    return updatedOrderWave;
+  }
+
 }

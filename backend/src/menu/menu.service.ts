@@ -35,8 +35,11 @@ export class MenuService {
     return priceMap;
   }
 
-  update(id: number, updateMenuDto: UpdateMenuDto) {
-    return `This action updates a #${id} menu`;
+  update(id: string, updateMenuDto: UpdateMenuDto) {
+    const menu = this.db.get('menus', id, 'id') as MenuModel;
+
+    menu.items = updateMenuDto.items;
+    return this.db.update('menus', menu, id, 'id');
   }
 
   remove(id: number) {

@@ -164,13 +164,28 @@
                 },
                 {
                     "item": "gorilla glue",
+                    "qty": 2,
+                    "subtotal": 21
+                },
+                {
+                    "item": "AMG",
                     "qty": 1,
-                    "subtotal": 10.5
+                    "subtotal": 11
+                },
+                {
+                    "item": "Bubble Gum",
+                    "qty": 1,
+                    "subtotal": 22
+                },
+                {
+                    "item": "something else",
+                    "qty": 2,
+                    "subtotal": 34
                 }
             ],
-            "total": 48,
+            "total": 125.5,
             "created-at": "Thu Dec 09 2021 00:43:59 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Thu Dec 09 2021 19:19:51 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 12 2021 13:08:42 GMT+0100 (Central European Standard Time)",
             "id": "a89843ea-1be9-4701-bcfe-6807d659361b"
         },
         {
@@ -284,6 +299,694 @@
             "created-at": "Thu Dec 09 2021 01:41:50 GMT+0100 (Central European Standard Time)",
             "last-updated": "Thu Dec 09 2021 23:16:53 GMT+0100 (Central European Standard Time)",
             "id": "650b3795-20de-4223-bf32-c63cd7eb57cb"
+        },
+        {
+            "user": {
+                "userId": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+                "username": "mine",
+                "role": "handler"
+            },
+            "items": [
+                {
+                    "item": "gorilla glue",
+                    "qty": 1,
+                    "subtotal": 10.5
+                },
+                {
+                    "item": "Amnesia",
+                    "qty": 1,
+                    "subtotal": 17
+                },
+                {
+                    "item": "AMG",
+                    "qty": 1,
+                    "subtotal": 11
+                },
+                {
+                    "item": "Super Silver Haze",
+                    "qty": 1,
+                    "subtotal": 8.5
+                },
+                {
+                    "item": "Gelatto",
+                    "qty": 1,
+                    "subtotal": 7.5
+                }
+            ],
+            "total": 54.5,
+            "created-at": "Sun Dec 12 2021 17:48:01 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 12 2021 17:48:01 GMT+0100 (Central European Standard Time)",
+            "id": "69c066f1-62c5-4e3a-9e30-d62e580f3a7a"
+        },
+        {
+            "user": {
+                "userId": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+                "username": "mine",
+                "role": "handler"
+            },
+            "items": [
+                {
+                    "item": "gorilla glue",
+                    "qty": 1,
+                    "subtotal": 10.5
+                },
+                {
+                    "item": "Amnesia",
+                    "qty": 1,
+                    "subtotal": 17
+                },
+                {
+                    "item": "AMG",
+                    "qty": 1,
+                    "subtotal": 11
+                },
+                {
+                    "item": "Super Silver Haze",
+                    "qty": 1,
+                    "subtotal": 8.5
+                },
+                {
+                    "item": "Gelatto",
+                    "qty": 1,
+                    "subtotal": 7.5
+                }
+            ],
+            "total": 54.5,
+            "created-at": "Sun Dec 12 2021 17:49:28 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 12 2021 17:49:28 GMT+0100 (Central European Standard Time)",
+            "id": "be7ecbe3-4548-4183-9973-5af3df40ec10"
+        },
+        {
+            "user": {
+                "userId": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+                "username": "mine",
+                "role": "handler"
+            },
+            "items": [
+                {
+                    "item": "gorilla glue",
+                    "qty": 1,
+                    "subtotal": 10.5
+                },
+                {
+                    "item": "Amnesia",
+                    "qty": 1,
+                    "subtotal": 17
+                },
+                {
+                    "item": "Super Pollen",
+                    "qty": 2,
+                    "subtotal": 24
+                }
+            ],
+            "total": 51.5,
+            "created-at": "Sun Dec 12 2021 17:57:32 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 12 2021 17:57:32 GMT+0100 (Central European Standard Time)",
+            "id": "cd6e0310-fdbd-49ce-8c61-b9c4cac0b03f"
+        },
+        {
+            "user": {
+                "userId": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+                "username": "mine",
+                "role": "handler"
+            },
+            "items": [
+                {
+                    "item": "gorilla glue",
+                    "qty": 2,
+                    "subtotal": 21
+                },
+                {
+                    "item": "AMG",
+                    "qty": 2,
+                    "subtotal": 22
+                },
+                {
+                    "item": "Amnesia",
+                    "qty": 2,
+                    "subtotal": 34
+                },
+                {
+                    "item": "Super Pollen",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Super Silver Haze",
+                    "qty": 1,
+                    "subtotal": 8.5
+                },
+                {
+                    "item": "Gelatto",
+                    "qty": 1,
+                    "subtotal": 7.5
+                },
+                {
+                    "item": "something else",
+                    "qty": 1,
+                    "subtotal": 17
+                }
+            ],
+            "total": 122,
+            "created-at": "Sun Dec 12 2021 18:00:05 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 12 2021 18:00:05 GMT+0100 (Central European Standard Time)",
+            "id": "6b0af137-a288-4a27-9a6f-4d4edc8bc11c"
+        },
+        {
+            "user": {
+                "userId": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+                "username": "mine",
+                "role": "handler"
+            },
+            "items": [
+                {
+                    "item": "Amnesia",
+                    "qty": 1,
+                    "subtotal": 17
+                },
+                {
+                    "item": "AMG",
+                    "qty": 1,
+                    "subtotal": 11
+                }
+            ],
+            "total": 28,
+            "created-at": "Sun Dec 12 2021 18:07:42 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 12 2021 18:07:42 GMT+0100 (Central European Standard Time)",
+            "id": "2925303e-3301-40b3-9cf9-455483f3c51b"
+        },
+        {
+            "user": {
+                "name": "mine",
+                "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+            },
+            "items": [
+                {
+                    "item": "Super Pollen",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Amnesia",
+                    "qty": 1,
+                    "subtotal": 17
+                },
+                {
+                    "item": "gorilla glue",
+                    "qty": 1,
+                    "subtotal": 10.5
+                },
+                {
+                    "item": "something else",
+                    "qty": 3,
+                    "subtotal": 51
+                }
+            ],
+            "total": 90.5,
+            "created-at": "Sun Dec 12 2021 18:15:55 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 15:28:58 GMT+0100 (Central European Standard Time)",
+            "id": "f62b4168-6ad5-44f6-ac42-5b4115d79be7"
+        },
+        {
+            "user": {
+                "name": "nati",
+                "id": "6b685af4-88cc-4a1d-a4ae-41ea4fcf44cc"
+            },
+            "items": [
+                {
+                    "item": "Super Pollen",
+                    "qty": 1,
+                    "subtotal": 12
+                }
+            ],
+            "total": 12,
+            "created-at": "Sun Dec 12 2021 18:18:06 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Sun Dec 12 2021 18:37:53 GMT+0100 (Central European Standard Time)",
+            "id": "a6ee5e85-fd82-4505-8be3-9c31fa496fed"
+        },
+        {
+            "user": {
+                "name": "vero",
+                "id": "bd2923dd-9a0d-4a00-a728-1d0a6dba769a"
+            },
+            "items": [],
+            "total": 0,
+            "created-at": "Sun Dec 12 2021 18:42:53 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 15:25:35 GMT+0100 (Central European Standard Time)",
+            "id": "e562b6f0-ca3d-44d7-a6e9-9d4901e5883e"
+        },
+        {
+            "user": {
+                "name": "Lucas",
+                "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+            },
+            "items": [
+                {
+                    "item": "Amnesia",
+                    "qty": 2,
+                    "subtotal": 34
+                },
+                {
+                    "item": "AMG",
+                    "qty": 2,
+                    "subtotal": 22
+                }
+            ],
+            "total": 56,
+            "created-at": "Mon Dec 13 2021 15:29:19 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 15:29:39 GMT+0100 (Central European Standard Time)",
+            "id": "0eaa30dd-2b0d-444f-9646-745f17794411"
+        },
+        {
+            "user": {
+                "name": "mine",
+                "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+            },
+            "items": [
+                {
+                    "item": "Bluberry Kush Filtred Hash 🍒🍓🍒",
+                    "qty": 3,
+                    "subtotal": null
+                },
+                {
+                    "item": "Banana Punch Refiltred 🍌🍌🍌",
+                    "qty": 3,
+                    "subtotal": null
+                },
+                {
+                    "item": "Mango Kush Filtred Hash🥭🥭🥭",
+                    "qty": 1,
+                    "subtotal": null
+                },
+                {
+                    "item": "Phineapple Express Pollinetor Hash 🍍🍍🍍",
+                    "qty": 2,
+                    "subtotal": null
+                },
+                {
+                    "item": "Fruit Cake (hybrid)🍉🍑🍒",
+                    "qty": 3,
+                    "subtotal": 33
+                },
+                {
+                    "item": "Rainbow Cake (hybrid)🌈🌈🌈",
+                    "qty": 2,
+                    "subtotal": 22
+                },
+                {
+                    "item": "Cookies Kush (indica)🍪☘️🍪",
+                    "qty": 4,
+                    "subtotal": 40
+                }
+            ],
+            "total": null,
+            "created-at": "Mon Dec 13 2021 17:30:15 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 17:36:32 GMT+0100 (Central European Standard Time)",
+            "id": "47354842-90b5-41ee-9f3a-f49c7c324beb"
+        },
+        {
+            "user": {
+                "name": "nati",
+                "id": "6b685af4-88cc-4a1d-a4ae-41ea4fcf44cc"
+            },
+            "items": [
+                {
+                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Blood Orange (hybrid)🍊🍊🍊",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Mimozz (hybrid)🍭🍭🍭",
+                    "qty": 3,
+                    "subtotal": 36
+                }
+            ],
+            "total": 60,
+            "created-at": "Mon Dec 13 2021 17:30:47 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 17:30:47 GMT+0100 (Central European Standard Time)",
+            "id": "1f2dfbab-2eca-47ed-b9ff-4e0aecca10e1"
+        },
+        {
+            "user": {
+                "name": "mine",
+                "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+            },
+            "items": [
+                {
+                    "item": "Strawberry Banana (indica)🍓🍌🍬",
+                    "qty": 1,
+                    "subtotal": 9
+                },
+                {
+                    "item": "Sour OG (hybrid) 🌰🌰🌰",
+                    "qty": 1,
+                    "subtotal": 9
+                },
+                {
+                    "item": "Amazone Kush (indica)🌿🌿🌿",
+                    "qty": 1,
+                    "subtotal": 9
+                },
+                {
+                    "item": "Blood Orange (sativa)🩸🍊🩸",
+                    "qty": 1,
+                    "subtotal": 10
+                },
+                {
+                    "item": "Sour Diesel (sativa)⛽️⛽️⛽️",
+                    "qty": 1,
+                    "subtotal": 9
+                },
+                {
+                    "item": "Larry OG (indica) 🌮🌮🌮",
+                    "qty": 1,
+                    "subtotal": 9
+                }
+            ],
+            "total": 55,
+            "created-at": "Mon Dec 13 2021 17:37:51 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 17:37:51 GMT+0100 (Central European Standard Time)",
+            "id": "4da6cc42-21e9-4e8d-8e19-a8eaf4e3e27f"
+        },
+        {
+            "user": {
+                "name": "nati",
+                "id": "6b685af4-88cc-4a1d-a4ae-41ea4fcf44cc"
+            },
+            "items": [
+                {
+                    "item": "Tegridy #1 (indica)🧊🧊🧊",
+                    "qty": 4,
+                    "subtotal": 44
+                },
+                {
+                    "item": "Scott OG (indica) 🌟🌟🌟",
+                    "qty": 5,
+                    "subtotal": 55
+                },
+                {
+                    "item": "Fruit Cake (hybrid)🍉🍑🍒",
+                    "qty": 2,
+                    "subtotal": 22
+                },
+                {
+                    "item": "Tenscotti 🍭 ",
+                    "qty": 1,
+                    "subtotal": 160
+                }
+            ],
+            "total": 281,
+            "created-at": "Mon Dec 13 2021 17:38:16 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 17:38:16 GMT+0100 (Central European Standard Time)",
+            "id": "f92080bc-7202-4b8d-b1a5-251caf8d8261"
+        },
+        {
+            "user": {
+                "name": "Lucas",
+                "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+            },
+            "items": [
+                {
+                    "item": "White Fire OG (hybrid)🔥🔥🔥",
+                    "qty": 6,
+                    "subtotal": 54
+                },
+                {
+                    "item": "Sour OG (hybrid) 🌰🌰🌰",
+                    "qty": 6,
+                    "subtotal": 54
+                },
+                {
+                    "item": "Strawberry Banana (indica)🍓🍌🍬",
+                    "qty": 5,
+                    "subtotal": 45
+                },
+                {
+                    "item": "Skunk (indica)🦨🦨🦨",
+                    "qty": 5,
+                    "subtotal": 32.5
+                }
+            ],
+            "total": 185.5,
+            "created-at": "Mon Dec 13 2021 17:38:51 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 17:38:51 GMT+0100 (Central European Standard Time)",
+            "id": "df9b82c7-7acd-4ab8-8941-7184ca8e22d0"
+        },
+        {
+            "user": {
+                "name": "mine",
+                "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+            },
+            "items": [
+                {
+                    "item": "Glookies (hybrid) 🦍🍪🦍",
+                    "qty": 5,
+                    "subtotal": 50
+                },
+                {
+                    "item": "HeadhCheese90 33 Triple Filtred 🧀🧀🧀",
+                    "qty": 4,
+                    "subtotal": 54
+                },
+                {
+                    "item": "Skunk (indica)🦨🦨🦨",
+                    "qty": 6,
+                    "subtotal": 39
+                },
+                {
+                    "item": "Cookies Kush (indica)🍪☘️🍪",
+                    "qty": 2,
+                    "subtotal": 20
+                },
+                {
+                    "item": "White Fire OG (hybrid)🔥🔥🔥",
+                    "qty": 2,
+                    "subtotal": 18
+                },
+                {
+                    "item": "Amazone Kush (indica)🌿🌿🌿",
+                    "qty": 1,
+                    "subtotal": 9
+                },
+                {
+                    "item": "Sour OG (hybrid) 🌰🌰🌰",
+                    "qty": 1,
+                    "subtotal": 9
+                },
+                {
+                    "item": "Sour Diesel (sativa)⛽️⛽️⛽️",
+                    "qty": 1,
+                    "subtotal": 9
+                }
+            ],
+            "total": 208,
+            "created-at": "Mon Dec 13 2021 17:43:05 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 20:04:40 GMT+0100 (Central European Standard Time)",
+            "id": "cda84399-1361-4f5c-a037-247e64820765"
+        },
+        {
+            "user": {
+                "name": "nati",
+                "id": "6b685af4-88cc-4a1d-a4ae-41ea4fcf44cc"
+            },
+            "items": [
+                {
+                    "item": "White Fire OG (hybrid)🔥🔥🔥",
+                    "qty": 10,
+                    "subtotal": 90
+                },
+                {
+                    "item": "Sour OG (hybrid) 🌰🌰🌰",
+                    "qty": 5,
+                    "subtotal": 45
+                }
+            ],
+            "total": 135,
+            "created-at": "Mon Dec 13 2021 17:43:25 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 17:43:25 GMT+0100 (Central European Standard Time)",
+            "id": "dc567163-ecfe-42f5-87d3-4c89df8eb87e"
+        },
+        {
+            "user": {
+                "name": "Lucas",
+                "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+            },
+            "items": [
+                {
+                    "item": "Glookies (hybrid) 🦍🍪🦍",
+                    "qty": 6,
+                    "subtotal": 60
+                },
+                {
+                    "item": "Sunday Driver 🍍 ",
+                    "qty": 1,
+                    "subtotal": 160
+                }
+            ],
+            "total": 220,
+            "created-at": "Mon Dec 13 2021 17:53:49 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 17:54:53 GMT+0100 (Central European Standard Time)",
+            "id": "a6d24017-1918-4e19-8db8-7c4f40ab8d8b"
+        },
+        {
+            "user": {
+                "name": "Lucas",
+                "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+            },
+            "items": [
+                {
+                    "item": "Melonade (sativa)🍉🍉🍉",
+                    "qty": 1,
+                    "subtotal": 10
+                },
+                {
+                    "item": "Strawberry Kush (indica)🍓🍓🍓",
+                    "qty": 1,
+                    "subtotal": 10
+                },
+                {
+                    "item": "L.A. Confidential (indica)🌃🌃🌃",
+                    "qty": 1,
+                    "subtotal": 10
+                }
+            ],
+            "total": 30,
+            "created-at": "Mon Dec 13 2021 20:09:41 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 22:53:17 GMT+0100 (Central European Standard Time)",
+            "id": "6343fa9e-4d5f-4180-946f-9a9bae6a0b86"
+        },
+        {
+            "user": {
+                "name": "nati",
+                "id": "6b685af4-88cc-4a1d-a4ae-41ea4fcf44cc"
+            },
+            "items": [
+                {
+                    "item": "Mimozz (hybrid)🍭🍭🍭",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Blood Orange (hybrid)🍊🍊🍊",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "qty": 1,
+                    "subtotal": 12
+                }
+            ],
+            "total": 36,
+            "created-at": "Mon Dec 13 2021 22:48:56 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 22:48:56 GMT+0100 (Central European Standard Time)",
+            "id": "fc3a2593-3120-4ab0-887d-a4aa0cc75d7b"
+        },
+        {
+            "user": {
+                "name": "Lucas",
+                "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+            },
+            "items": [
+                {
+                    "item": "Ice Cream Cake (hybrid)🍧🍧🍧",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Kosher Kush (indica)🕍🕍🕍",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Zuccotti (hybrid)🥮🥮🥮",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Tegridy #1 (indica)🧊🧊🧊",
+                    "qty": 1,
+                    "subtotal": 11
+                },
+                {
+                    "item": "Scott OG (indica) 🌟🌟🌟",
+                    "qty": 1,
+                    "subtotal": 11
+                },
+                {
+                    "item": "Fruit Cake (hybrid)🍉🍑🍒",
+                    "qty": 1,
+                    "subtotal": 11
+                }
+            ],
+            "total": 69,
+            "created-at": "Mon Dec 13 2021 23:09:11 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 23:09:11 GMT+0100 (Central European Standard Time)",
+            "id": "d038f765-9763-41c1-a60a-eec27fa553db"
+        },
+        {
+            "user": {
+                "name": "Lucas",
+                "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+            },
+            "items": [
+                {
+                    "item": "Mimozz (hybrid)🍭🍭🍭",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Blood Orange (hybrid)🍊🍊🍊",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Bacio Gelato (hybrid)🍨🍨🍨",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Mimosa (hybrid)🌾🌾🌾",
+                    "qty": 1,
+                    "subtotal": 11
+                }
+            ],
+            "total": 59,
+            "created-at": "Mon Dec 13 2021 23:14:48 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 23:14:48 GMT+0100 (Central European Standard Time)",
+            "id": "01750356-9a6f-4e4c-aa64-640081c8f8b6"
+        },
+        {
+            "user": {
+                "name": "Lucas",
+                "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+            },
+            "items": [
+                {
+                    "item": "Ice Cream Cake (hybrid)🍧🍧🍧",
+                    "qty": 2,
+                    "subtotal": 24
+                },
+                {
+                    "item": "Kosher Kush (indica)🕍🕍🕍",
+                    "qty": 2,
+                    "subtotal": 24
+                }
+            ],
+            "total": 48,
+            "created-at": "Mon Dec 13 2021 23:22:25 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 13 2021 23:22:25 GMT+0100 (Central European Standard Time)",
+            "id": "2c7a10a7-0c19-4eb4-976f-3fce2351f2ce"
         }
     ]
 }
