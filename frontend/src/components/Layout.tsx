@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AppBar, BottomNavigation, BottomNavigationAction, Box, Button, Container, IconButton, List, ListItem, Paper, Toolbar, Typography } from '@mui/material';
 import { Menu, Restore, Favorite, Archive } from '@mui/icons-material';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
@@ -6,13 +6,15 @@ import { useAuth } from '../providers/auth-provider';
 import { SwipeableEdgeDrawer } from './Drawer';
 import { useOrder } from '../providers/order-provider';
 import { OrderSummary } from './OrderSumary';
+import { Sidebar } from './Sidebar';
+import { BottomDrawerProvider } from '../providers/bottom-drawer-provider';
+
 
 export function Layout() {
-  const [value, setValue] = React.useState(0);
-  const ref = React.useRef<HTMLDivElement>(null);
 
   const auth = useAuth();
   const navigate = useNavigate();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const {userName, userId} = auth;
 
@@ -23,12 +25,17 @@ export function Layout() {
     navigate('/login');
   }
 
+  const toggleSidebar = (newOpen: boolean) => {
+    setIsSidebarOpen(newOpen);
+  }
+
   return (<>
     <Box sx={{
       height: '100vh',
       display: 'flex',
       flexDirection: 'column'
     }}>
+      <Sidebar open={isSidebarOpen} onClose={() => toggleSidebar(false)}></Sidebar>
       <AppBar position="sticky">
         <Toolbar>
           <IconButton
@@ -37,6 +44,7 @@ export function Layout() {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            onClick={() => toggleSidebar(true)}
           >
             <Menu></Menu>
           </IconButton>
@@ -52,23 +60,12 @@ export function Layout() {
           }}>
             <Outlet />
           </Box>
-          <SwipeableEdgeDrawer title={`total: ${total} €` }>
-            <OrderSummary></OrderSummary>
-          </SwipeableEdgeDrawer>
+          <BottomDrawerProvider>
+            <SwipeableEdgeDrawer title={`total: ${total} €` }>
+              <OrderSummary></OrderSummary>
+            </SwipeableEdgeDrawer>
+          </BottomDrawerProvider>
       </Container>
-      <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
-        <BottomNavigation
-          showLabels
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
-        >
-          <BottomNavigationAction label="Recents" icon={<Restore />} />
-          <BottomNavigationAction label="Favorites" icon={<Favorite />} />
-          <BottomNavigationAction label="Archive" icon={<Archive />} />
-        </BottomNavigation>
-      </Paper>
     </Box>
   </>);
 }

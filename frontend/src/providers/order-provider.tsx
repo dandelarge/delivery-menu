@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { client } from '../api-client';
+import { useOrderWave } from './orderwave-provider';
 
 export interface OrderItem {
   qty?: number;
@@ -15,6 +16,7 @@ export interface OrderContextType {
   updateItems: (items: OrderItem[]) => void;
   updateTotal: (total: number) => void;
   saveOrder: () => Promise<void>;
+  fetchOrder: () => Promise<void>;
 }
 
 export const OrderContext = React.createContext<OrderContextType>(null!);
@@ -28,13 +30,22 @@ export function OrderProvider({children}: {children: JSX.Element}) {
   const updateItems = (items: OrderItem[]) => setItems(items);
   const updateTotal = (number: number) => setTotal(number);
 
+
+  const fetchOrder = () => client.get('/orders').then(({data}) => {
+    if(!data.id) {
+      setItems([]);
+      setTotal(0);
+      return;
+    }
+    setId(data.id);
+    setUser(data.user.username);
+    setItems(data.items);
+    setTotal(data.total);
+  });
+
   useEffect(() => {
-    client.get('/orders').then(({data}) => {
-      console.log(data)
-      setId(data.id);
-      setUser(data.user.username);
-      setItems(data.items);
-      setTotal(data.total);
+    fetchOrder().catch(error => {
+      console.log(error);
     })
   }, []);
 
@@ -59,7 +70,8 @@ export function OrderProvider({children}: {children: JSX.Element}) {
     total,
     updateItems,
     updateTotal,
-    saveOrder
+    saveOrder,
+    fetchOrder
   }
 
   return <OrderContext.Provider value={value}>{children}</OrderContext.Provider>

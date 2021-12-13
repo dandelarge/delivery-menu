@@ -4,7 +4,7 @@ import { appTheme } from './theme';
 import { Routes, Route, Outlet, BrowserRouter } from 'react-router-dom';
 import { Login } from './components/Login';
 import { Users } from './components/Users';
-import { Menu } from './components/Menu';
+import { Menu, MenuItem } from './components/Menu';
 import { Layout } from './components/Layout';
 import { HomePage } from './components/HomePage';
 import { AuthProvider } from './providers/auth-provider';
@@ -13,7 +13,15 @@ import { RequireAuth } from './routeGuards/RequireAuth';
 import { OrderWaveProvider } from './providers/orderwave-provider';
 import { OrderProvider } from './providers/order-provider';
 import { OrderSummary } from './components/OrderSumary';
+import DateAdapter from '@mui/lab/AdapterDateFns';
+import { LocalizationProvider } from '@mui/lab';
+import MakeOrderWave from './components/MakeOrderWave';
+import CreateMenu from './components/CreateMenu';
 
+
+function handleMenuCreated(items: MenuItem[]) {
+  console.log(items.map(item => item.name));
+}
 function App() {
 
   return (
@@ -28,7 +36,9 @@ function App() {
                   <RequireAuth>
                     <OrderWaveProvider>
                       <OrderProvider>
-                        <Layout />
+                        <LocalizationProvider dateAdapter={DateAdapter}>
+                          <Layout />
+                        </LocalizationProvider>
                       </OrderProvider>
                     </OrderWaveProvider>
                   </RequireAuth>
@@ -41,7 +51,7 @@ function App() {
                   }
                 />
                 <Route
-                  path="menu/:id"
+                  path="menu"
                   element={
                     <Menu />
                   }/>
@@ -54,9 +64,15 @@ function App() {
                   }
                 />
                 <Route
-                  path="order"
+                  path="make-orderwave"
                   element={
-                    <OrderSummary></OrderSummary>
+                    <MakeOrderWave />
+                  }
+                />
+                <Route
+                  path="create-menu"
+                  element={
+                    <CreateMenu/>
                   }
                 />
               </Route>

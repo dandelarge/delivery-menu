@@ -10,6 +10,7 @@ interface AuthContextType {
   userRole?: string;
   login: (username: string, password: string) => Promise<any>;
   logout: () => Promise<void>;
+  isHandler:() => boolean;
 }
 
 export const AuthContext = React.createContext<AuthContextType>(null!);
@@ -38,6 +39,10 @@ export function AuthProvider({children}: {children: JSX.Element}) {
     return await authorization.logout()
   }
 
+  function isHandler(): boolean {
+    return userRole === 'handler';
+  }
+
   const value = {
     authenticated,
     token,
@@ -45,7 +50,8 @@ export function AuthProvider({children}: {children: JSX.Element}) {
     userId,
     userRole,
     login,
-    logout
+    logout,
+    isHandler
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

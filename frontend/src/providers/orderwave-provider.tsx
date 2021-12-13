@@ -27,6 +27,7 @@ export interface OrderWaveContextType {
   menuId?: string;
   orders?: OrderModel[];
   summary?: OrderItem[];
+  fetchOrderWave: () => Promise<void>;
   total?: number;
 }
 
@@ -41,18 +42,20 @@ export function OrderWaveProvider({children}: {children: JSX.Element}) {
   const [orders, setOrders] = useState<OrderModel[]>([{id: ''}]);
   const [total, setTotal] = useState(0);
 
-  useEffect(() => {
-    client.get('order-wave').then(({data}) => {
+  const fetchOrderWave = () =>  client.get('order-wave').then(({data}) => {
+    const { id, handler, order_before, menu_id, summary, orders, total } = data;
+    console.log(orders?.map( (order: OrderModel) => order.total));
+    setId(id);
+    setHandler(handler.name);
+    setOrderBefore(order_before);
+    setMenuId(menu_id);
+    setOrders(orders);
+    setSummary(summary);
+    setTotal(total);
+  });
 
-      const { id, handler, order_before, menu_id, summary, orders, total } = data;
-      setId(id);
-      setHandler(handler.name);
-      setOrderBefore(order_before);
-      setMenuId(menu_id);
-      setOrders(orders);
-      setSummary(summary);
-      setTotal(total);
-    });
+  useEffect(() => {
+    fetchOrderWave();
   }, []);
 
   const value = {
@@ -62,7 +65,8 @@ export function OrderWaveProvider({children}: {children: JSX.Element}) {
     menuId,
     summary,
     orders,
-    total
+    total,
+    fetchOrderWave
   }
 
   return <OrderWaveContext.Provider value={value}>{children}</OrderWaveContext.Provider>

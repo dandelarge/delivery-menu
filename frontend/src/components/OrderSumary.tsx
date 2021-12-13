@@ -1,36 +1,42 @@
-import { Box, Button, Card, CardActions, CardContent, List, ListItem, Typography } from '@mui/material';
+import { Box, Button, List, ListItem, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
+import { useBottomDrawer } from '../providers/bottom-drawer-provider';
 import { useOrder } from '../providers/order-provider';
+import SummaryList from './SummaryList';
+import { useOrderWave } from '../providers/orderwave-provider';
 
 
 
 export function OrderSummary() {
+  const {fetchOrderWave} = useOrderWave();
   const {items, saveOrder} = useOrder();
+  const {closeBottomDrawer} = useBottomDrawer();
 
   function handleSaveButtonClick() {
     saveOrder();
+    closeBottomDrawer();
+    if(fetchOrderWave) fetchOrderWave();
   }
 
 
-  return (
+  return (<>
     <Box sx={{
       height: '100%',
       textAlign: 'right',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between'
-      }}>
-    <List sx={{flexGrow: 1}}>
-    {items && items.map( ({item, qty, subtotal}) => (
-      <ListItem key={item}>
-        <Typography variant="caption">{qty}g.</Typography>
-        <Box component='span' sx={{mr: 1, ml: 1}}>-</Box>
-        <Typography variant="caption" sx={{flexGrow: 1}}>{item}</Typography>
-        <Typography variant="caption">{subtotal}</Typography>
-      </ListItem>
-    ))}
-    </List>
-    <Button onClick={handleSaveButtonClick} variant="contained" color="secondary" sx={{ml: 'auto'}}>Save The order</Button>
+      }}
+    >
+      <SummaryList items={items || []} />
+      <Button
+        onClick={handleSaveButtonClick}
+        variant="contained"
+        color="secondary"
+        sx={{ml: 'auto'}}
+      >
+        Save The order
+      </Button>
     </Box>
-);
+</>);
 }

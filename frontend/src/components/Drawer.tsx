@@ -1,15 +1,16 @@
 import * as React from 'react';
 import { Global } from '@emotion/react';
 import { styled } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 import { grey } from '@mui/material/colors';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import { ButtonGroup, Drawer } from '@mui/material';
+import { useBottomDrawer } from '../providers/bottom-drawer-provider';
 
-const drawerBleeding = 112;
+const drawerBleeding = 56;
 
 interface Props {
   children: JSX.Element;
@@ -27,6 +28,18 @@ const StyledBox = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800],
 }));
 
+const DrawerHeading = styled(StyledBox)(({theme}) => ({
+  position: 'absolute',
+  top: -drawerBleeding,
+  borderTopLeftRadius: 8,
+  borderTopRightRadius: 8,
+  visibility: 'visible',
+  right: 0,
+  left: 0,
+  display: 'flex',
+  flexDirection:'column'
+}));
+
 const Puller = styled(Box)(({ theme }) => ({
   width: 30,
   height: 6,
@@ -39,11 +52,8 @@ const Puller = styled(Box)(({ theme }) => ({
 
 export function SwipeableEdgeDrawer(props: Props) {
   const { window } = props;
-  const [open, setOpen] = React.useState(false);
 
-  const toggleDrawer = (newOpen: boolean) => () => {
-    setOpen(newOpen);
-  };
+  const {bottomDrawerOpen, openBottomDrawer, closeBottomDrawer} = useBottomDrawer();
 
   // This is used only for the example
   const container = window !== undefined ? () => window().document.body : undefined;
@@ -52,39 +62,33 @@ export function SwipeableEdgeDrawer(props: Props) {
     <>
       <Global
         styles={{
-          '.MuiDrawer-root > .MuiPaper-root': {
+          '.MuiDrawer-root > .MuiDrawer-paperAnchorBottom': {
             height: `calc(50% - ${drawerBleeding}px)`,
             overflow: 'visible',
           },
         }}
       />
 
-      <SwipeableDrawer
-        container={container}
+      <Drawer
         anchor="bottom"
-        open={open}
-        onClose={toggleDrawer(false)}
-        onOpen={toggleDrawer(true)}
-        swipeAreaWidth={drawerBleeding}
-        disableSwipeToOpen={false}
+        open={bottomDrawerOpen}
+        onClose={closeBottomDrawer}
         ModalProps={{
           keepMounted: true,
         }}
       >
-        <StyledBox
-          sx={{
-            position: 'absolute',
-            top: -drawerBleeding,
-            borderTopLeftRadius: 8,
-            borderTopRightRadius: 8,
-            visibility: 'visible',
-            right: 0,
-            left: 0,
-          }}
+        <DrawerHeading
+          onClick={openBottomDrawer}
         >
           <Puller />
-          <Typography sx={{ p: 2, color: 'text.secondary', textAlign: 'right' }}>{props.title}</Typography>
-        </StyledBox>
+          <Button
+            variant="text"
+            color="secondary"
+            sx={{ mx: 2, p: 2, alignSelf: 'flex-end'}}
+          >
+            {props.title}
+          </Button>
+        </DrawerHeading>
         <StyledBox
           sx={{
             px: 2,
@@ -95,7 +99,7 @@ export function SwipeableEdgeDrawer(props: Props) {
         >
           {props.children}
         </StyledBox>
-      </SwipeableDrawer>
+      </Drawer>
     </>
   );
 }

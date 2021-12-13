@@ -19,21 +19,24 @@ const DataRow = ({
     name,
     price,
     onRemove,
-    onAdd
+    onAdd,
+    highlight,
   }: {
     name: string,
     price: number,
     onRemove: (name: string) => void,
-    onAdd: (name: string) => void}) => {
+    onAdd: (name: string) => void,
+    highlight?: boolean
+  }) => {
 
-  return (<TableRow>
+  return (<TableRow selected={highlight}>
       <TableCell> {name} </TableCell>
       <TableCell align="center"> {price} </TableCell>
       <TableCell sx={{textAlign: 'right', minWidth: '8em'}}>
-        <IconButton onClick={() => onRemove(name)} color="primary">
+        <IconButton onClick={() => onRemove(name)} color="secondary">
           <Remove></Remove>
         </IconButton>
-        <IconButton onClick={() => onAdd(name)} color="primary">
+        <IconButton onClick={() => onAdd(name)} color="secondary">
           <Add></Add>
         </IconButton>
       </TableCell>
@@ -54,7 +57,8 @@ export const Menu = () => {
     client.get('menu').then( ({data}) => {
       setMenu(data);
       const priceMap = new Map<string, number>();
-      data.items.forEach( ({name, price}: MenuItem) => priceMap.set(name, price));
+      const items = data.items || [];
+      items.forEach( ({name, price}: MenuItem) => priceMap.set(name, price));
       setPriceMap(priceMap);
     });
   }, []);
@@ -112,12 +116,13 @@ export const Menu = () => {
               </TableRow>
           </TableHead>
           <TableBody>
-              {menu?.items.map( ({name, price}) => {
+              {menu?.items && menu?.items?.map( ({name, price}) => {
                   return (<DataRow
                     onRemove={handleRemoveButtonClick}
                     onAdd={handleAddButtonClick}
                     name={name}
                     price={price}
+                    highlight={summaryMap.has(name)}
                     key={name}
                   ></DataRow>);
               })}
