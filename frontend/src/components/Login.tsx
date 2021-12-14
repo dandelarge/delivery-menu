@@ -1,4 +1,5 @@
-import { Button, Card, Container, Stack, TextField } from '@mui/material';
+import { Stop } from '@mui/icons-material';
+import { Alert, Button, Card, Container, Snackbar, Stack, TextField } from '@mui/material';
 import { Box } from '@mui/system';
 import React, {useEffect, useState} from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -13,17 +14,28 @@ export const Login = () => {
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
+  const [hasError, setHasError] = useState(auth.hasError);
+
   useEffect(() => {
-    console.log(auth);
     if (auth.authenticated) {
       navigate(from, { replace: true });
     }
   }, [auth.authenticated]);
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    const data = await auth.login(user, pass);
+  useEffect(() => {
+    setHasError(auth.hasError);
+  }, [auth.hasError])
+
+
+  function handleSnackbarClose() {
+    setHasError(false);
   }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    auth.login(user, pass).then(() => setHasError(auth.hasError));
+  }
+
 
   return (
     <Container maxWidth="xs">
@@ -35,6 +47,14 @@ export const Login = () => {
         justifyContent: 'center'
       }}>
         <form onSubmit={handleSubmit}>
+          <Snackbar
+            anchorOrigin={{vertical:'top', horizontal:'center'}}
+            open={hasError}
+            autoHideDuration={10000}
+            onClose={handleSnackbarClose}
+          >
+            <Alert severity='error'>Wrong credentials :(</Alert>
+          </Snackbar>
           <Stack >
             <TextField label="username" onChange={e => setUser(e.currentTarget.value)} value={user}></TextField>
             <TextField label="password" onChange={e => setPass(e.currentTarget.value)} value={pass} type="password"></TextField>

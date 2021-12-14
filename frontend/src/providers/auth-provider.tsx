@@ -11,6 +11,8 @@ interface AuthContextType {
   login: (username: string, password: string) => Promise<any>;
   logout: () => Promise<void>;
   isHandler:() => boolean;
+  error: any;
+  hasError: boolean;
 }
 
 export const AuthContext = React.createContext<AuthContextType>(null!);
@@ -24,14 +26,22 @@ export function AuthProvider({children}: {children: JSX.Element}) {
   const [userName, setUserName] = useState(name);
   const [userId, setUserId] = useState(id);
   const [userRole, setUserRole] = useState(role);
+  const [error, setError] = useState<any>();
+  const [hasError, setHasError] = useState(false)
 
   async function login(username:string, password:string){
-    const userData = await authorization.login(username,password);
-    setUserName(userData.name);
-    setUserId(userData.id);
-    setUserRole(userData.role);
-    setAuthenticated(true);
-    return userData;
+    try {
+      const userData = await authorization.login(username,password);
+      setHasError(false);
+      setUserName(userData.name);
+      setUserId(userData.id);
+      setUserRole(userData.role);
+      setAuthenticated(true);
+      return userData;
+    } catch (error) {
+      setError(error);
+      setHasError(true);
+    }
   }
 
   async function logout(){
@@ -51,7 +61,9 @@ export function AuthProvider({children}: {children: JSX.Element}) {
     userRole,
     login,
     logout,
-    isHandler
+    isHandler,
+    error,
+    hasError
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

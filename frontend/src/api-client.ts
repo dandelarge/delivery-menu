@@ -1,5 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosRequestHeaders } from 'axios';
 
+const baseURL = process.env.NODE_ENV === 'production' ? '': 'http://localhost:3012/';
+
 export function getAccessTokenFromLocalStorage() {
   return localStorage.getItem('access_token');
 }
@@ -9,7 +11,7 @@ export function setAccessTokenInLocalStorage(token: string) {
 }
 
 const baseConfig: Partial<AxiosRequestConfig> = {
-  baseURL:'http://localhost:3012/',
+  baseURL,
   timeout: 1000
 };
 

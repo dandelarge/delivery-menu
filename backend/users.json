@@ -1,65 +1,12 @@
 {
     "users": [
         {
-            "name": " Dani ",
-            "created-at": "Sun Dec 05 2021 14:02:03 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Sun Dec 05 2021 14:02:03 GMT+0100 (Central European Standard Time)",
-            "id": "f5561b35-c35e-48a1-bc87-4a62b4a45bbd"
-        },
-        {
-            "name": "Dani",
-            "password": "$2b$10$ndqBMLgJp3dmg./2CG2WkeKXQS.sAD0Dk.a8GSsGAPzZUIr0quWay",
-            "created-at": "Sun Dec 05 2021 16:54:47 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Sun Dec 05 2021 16:54:47 GMT+0100 (Central European Standard Time)",
-            "id": "561c8702-aaac-4159-a1c0-c8eb211aa8a0"
-        },
-        {
             "name": "mine",
             "password": "$2b$10$HSAK9eodYuhe6E6/vFYW0urC/gDSYcSoDJ5ZclfO1s8nZQnHvROtG",
             "created-at": "Sun Dec 05 2021 18:02:20 GMT+0100 (Central European Standard Time)",
             "last-updated": "Sun Dec 05 2021 19:19:18 GMT+0100 (Central European Standard Time)",
             "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
             "role": "handler"
-        },
-        {
-            "name": "nati",
-            "password": "$2b$10$6oud2bnqYGhBbn4pfmjYsOmAuQzd4XS37c05AZPEChg87IkqVwEq.",
-            "role": "customer",
-            "created-at": "Sun Dec 05 2021 20:53:42 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Sun Dec 05 2021 20:53:42 GMT+0100 (Central European Standard Time)",
-            "id": "6b685af4-88cc-4a1d-a4ae-41ea4fcf44cc"
-        },
-        {
-            "name": "dani",
-            "password": "$2b$10$Bw8KIqO/un5brS4X/SQwquZ.O7Dqr2kE1QZD3JeBobtGUU5SFiVLS",
-            "role": "customer",
-            "created-at": "Sun Dec 05 2021 20:55:42 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Sun Dec 05 2021 20:55:42 GMT+0100 (Central European Standard Time)",
-            "id": "c3a83641-bd6f-4a3e-b000-301e41cff943"
-        },
-        {
-            "name": "vero",
-            "password": "$2b$10$9K2.iaeGt7hZV3WjpnZ/eec3GWs9JUGE8htjz7wxN.nnAAFngFpS.",
-            "role": "handler",
-            "created-at": "Wed Dec 08 2021 21:13:43 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Wed Dec 08 2021 21:13:43 GMT+0100 (Central European Standard Time)",
-            "id": "bd2923dd-9a0d-4a00-a728-1d0a6dba769a"
-        },
-        {
-            "name": "vero",
-            "password": "$2b$10$R6G6xS7jiCnzVBymd/JJA.dKZp1qgMx6XNXiKEtL9gzzn3E8eeDqG",
-            "role": "handler",
-            "created-at": "Wed Dec 08 2021 21:15:40 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Wed Dec 08 2021 21:15:40 GMT+0100 (Central European Standard Time)",
-            "id": "b22e88a0-a90e-4f66-8066-c0d5e6fa7600"
-        },
-        {
-            "name": "Adri",
-            "password": "$2b$10$G2sujCXQnsBfCpdZos/U6unudxHINE0KS6wamMNF1WqdB1pSZUxdq",
-            "role": "handler",
-            "created-at": "Thu Dec 09 2021 23:12:03 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Thu Dec 09 2021 23:12:03 GMT+0100 (Central European Standard Time)",
-            "id": "f77fda70-d514-45e2-850a-50dde4f9aa07"
         },
         {
             "name": "Lucas",

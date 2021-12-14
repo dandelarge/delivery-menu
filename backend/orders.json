@@ -995,19 +995,29 @@
             },
             "items": [
                 {
-                    "item": "Biscotti Eggs Double Filtred 🍪🍪🍪 ",
+                    "item": "Blood Orange (hybrid)🍊🍊🍊",
                     "qty": 1,
-                    "subtotal": 13.5
+                    "subtotal": 12
                 },
                 {
-                    "item": "Mandarina Eggs Double Filtred 🍊🍊🍊",
-                    "qty": 6,
-                    "subtotal": 81
+                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Bacio Gelato (hybrid)🍨🍨🍨",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Mimosa (hybrid)🌾🌾🌾",
+                    "qty": 1,
+                    "subtotal": 11
                 }
             ],
-            "total": 94.5,
+            "total": 47,
             "created-at": "Tue Dec 14 2021 07:09:30 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Tue Dec 14 2021 07:09:30 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Tue Dec 14 2021 12:28:49 GMT+0100 (Central European Standard Time)",
             "id": "3d939b34-baec-4022-b151-093089d8cfee"
         },
         {
@@ -1017,24 +1027,24 @@
             },
             "items": [
                 {
-                    "item": "Mimozz (hybrid)🍭🍭🍭",
+                    "item": "Bacio Gelato (hybrid)🍨🍨🍨",
                     "qty": 1,
                     "subtotal": 12
                 },
                 {
-                    "item": "Blood Orange (hybrid)🍊🍊🍊",
-                    "qty": 3,
-                    "subtotal": 36
+                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "qty": 1,
+                    "subtotal": 12
                 },
                 {
-                    "item": "Zookies (hybrid)🥮🥮🥮",
-                    "qty": 2,
-                    "subtotal": 24
+                    "item": "Strawberry Kush (indica)🍓🍓🍓",
+                    "qty": 5,
+                    "subtotal": 50
                 }
             ],
-            "total": 72,
+            "total": 74,
             "created-at": "Tue Dec 14 2021 07:10:16 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Tue Dec 14 2021 07:10:16 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Tue Dec 14 2021 12:29:38 GMT+0100 (Central European Standard Time)",
             "id": "73a76983-434f-4d2d-ba83-c8afe494d473"
         }
     ]

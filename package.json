@@ -7,7 +7,11 @@
     "frontend": "npm start --prefix frontend",
     "backend": "npm run start:dev --prefix backend",
     "start:concurrently": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "start:pm2": "pm2 start ecosystem.config.js"
+    "start:pm2": "pm2 start ecosystem.config.js",
+    "build:frontend": "BUILD_PATH='../backend/client' npm run build --prefix frontend",
+    "build:backend": "npm run build --prefix backend",
+    "build": "npm run build:frontend && npm run build:backend",
+    "start:prod": "npm run build && npm run start:prod --prefix backend"
   },
   "repository": {
     "type": "git",

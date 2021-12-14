@@ -4,6 +4,7 @@ import { useBottomDrawer } from '../providers/bottom-drawer-provider';
 import { useOrder } from '../providers/order-provider';
 import SummaryList from './SummaryList';
 import { useOrderWave } from '../providers/orderwave-provider';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -11,11 +12,13 @@ export function OrderSummary() {
   const {fetchOrderWave} = useOrderWave();
   const {items, saveOrder} = useOrder();
   const {closeBottomDrawer} = useBottomDrawer();
+  const navigate = useNavigate();
 
   function handleSaveButtonClick() {
     saveOrder();
-    closeBottomDrawer();
+    if(closeBottomDrawer) closeBottomDrawer();
     if(fetchOrderWave) fetchOrderWave();
+    navigate('/');
   }
 
 

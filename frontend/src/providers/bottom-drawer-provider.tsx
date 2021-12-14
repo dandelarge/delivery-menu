@@ -11,11 +11,11 @@ const BottomDrawerContext = createContext<BottomDrawerContextType>(null!);
 export function BottomDrawerProvider({children}: {children: JSX.Element}) {
   const [bottomDrawerOpen, setBottomDrawerOpen] = useState(false);
 
-  function closeBottomDrawer() {
+  const closeBottomDrawer = ()  => {
     setBottomDrawerOpen(false);
   }
 
-  function openBottomDrawer() {
+  const openBottomDrawer = () => {
     setBottomDrawerOpen(true);
   }
 
