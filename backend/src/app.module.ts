@@ -8,9 +8,13 @@ import { OrdersModule } from './orders/orders.module';
 import { MenuModule } from './menu/menu.module';
 import { OrderWaveModule } from './orderwave/orderwave.module';
 import { MenuService } from './menu/menu.service';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
-  imports: [AuthModule, DbModule, UsersModule, MenuModule, OrdersModule, OrderWaveModule],
+  imports: [AuthModule, DbModule, UsersModule, MenuModule, OrdersModule, OrderWaveModule, ServeStaticModule.forRoot({
+    rootPath: join(__dirname, '..', 'client')
+  })],
   controllers: [AppController],
   providers: [AppService],
 })

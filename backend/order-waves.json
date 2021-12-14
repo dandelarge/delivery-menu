@@ -2046,10 +2046,36 @@
                 "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
             },
             "order_before": "2021-12-17T21:00:06.000Z",
-            "summary": [],
-            "total": 0,
+            "summary": [
+                {
+                    "item": "Biscotti Eggs Double Filtred 🍪🍪🍪 ",
+                    "qty": 1,
+                    "subtotal": 13.5
+                },
+                {
+                    "item": "Mandarina Eggs Double Filtred 🍊🍊🍊",
+                    "qty": 6,
+                    "subtotal": 81
+                },
+                {
+                    "item": "Mimozz (hybrid)🍭🍭🍭",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Blood Orange (hybrid)🍊🍊🍊",
+                    "qty": 3,
+                    "subtotal": 36
+                },
+                {
+                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "qty": 2,
+                    "subtotal": 24
+                }
+            ],
+            "total": 166.5,
             "created-at": "Mon Dec 13 2021 20:06:23 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Mon Dec 13 2021 23:23:13 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Tue Dec 14 2021 07:10:16 GMT+0100 (Central European Standard Time)",
             "id": "195221b0-7513-4565-97ff-73fa97e2a34e",
             "orders": {},
             "menu": {
@@ -2239,7 +2265,63 @@
                 "last-updated": "Mon Dec 13 2021 20:07:06 GMT+0100 (Central European Standard Time)",
                 "id": "abc3e24b-44d1-4f05-96ce-cb5d3b88af87"
             },
-            "rawOrders": []
+            "rawOrders": [
+                [
+                    "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+                    {
+                        "user": {
+                            "name": "mine",
+                            "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+                        },
+                        "items": [
+                            {
+                                "item": "Biscotti Eggs Double Filtred 🍪🍪🍪 ",
+                                "qty": 1,
+                                "subtotal": 13.5
+                            },
+                            {
+                                "item": "Mandarina Eggs Double Filtred 🍊🍊🍊",
+                                "qty": 6,
+                                "subtotal": 81
+                            }
+                        ],
+                        "total": 94.5,
+                        "created-at": "Tue Dec 14 2021 07:09:30 GMT+0100 (Central European Standard Time)",
+                        "last-updated": "Tue Dec 14 2021 07:09:30 GMT+0100 (Central European Standard Time)",
+                        "id": "3d939b34-baec-4022-b151-093089d8cfee"
+                    }
+                ],
+                [
+                    "cf4e1585-aa23-4645-8edd-1f16b09e1d7e",
+                    {
+                        "user": {
+                            "name": "Lucas",
+                            "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+                        },
+                        "items": [
+                            {
+                                "item": "Mimozz (hybrid)🍭🍭🍭",
+                                "qty": 1,
+                                "subtotal": 12
+                            },
+                            {
+                                "item": "Blood Orange (hybrid)🍊🍊🍊",
+                                "qty": 3,
+                                "subtotal": 36
+                            },
+                            {
+                                "item": "Zookies (hybrid)🥮🥮🥮",
+                                "qty": 2,
+                                "subtotal": 24
+                            }
+                        ],
+                        "total": 72,
+                        "created-at": "Tue Dec 14 2021 07:10:16 GMT+0100 (Central European Standard Time)",
+                        "last-updated": "Tue Dec 14 2021 07:10:16 GMT+0100 (Central European Standard Time)",
+                        "id": "73a76983-434f-4d2d-ba83-c8afe494d473"
+                    }
+                ]
+            ]
         }
     ]
 }

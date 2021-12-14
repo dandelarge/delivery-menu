@@ -16,10 +16,6 @@ export class AppController {
     private readonly userService: UsersService,
     private readonly authService: AuthService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
 
   @UseGuards(LocalAuthGuard)
   @Post('login')
