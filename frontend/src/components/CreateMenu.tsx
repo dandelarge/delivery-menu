@@ -70,7 +70,7 @@ export default function CreateMenu(): JSX.Element {
     }
 
     const lines: string[] = menuText.split('\n');
-    const regex = /(^.+[^\d^\.]|[^\d])([\d\.]{1,4})\€?/;
+    const regex = /(^.+[^\d^\.]|[^\d])([\d\.]{1,4}).?/;
     const menuItems: MenuItem[] = lines
       .filter(line => regex.test(line))
       .map(line => {
@@ -78,7 +78,7 @@ export default function CreateMenu(): JSX.Element {
         if (!match) return { id: '', name: '', price: 0 };
         return { id: match[0], name: match[1], price: parseFloat(match[2]) }
       });
-    if (menuItems !== null && menuItems.length < 0) {
+    if (menuItems !== null && menuItems.length > 0) {
       onMenuCreated(menuItems);
     } else {
       console.error('WTF...');
