@@ -6,56 +6,10 @@
                 "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
             },
             "order_before": "2021-12-17T21:00:06.000Z",
-            "summary": [
-                {
-                    "item": "Blood Orange (hybrid)🍊🍊🍊",
-                    "qty": 1,
-                    "subtotal": 12
-                },
-                {
-                    "item": "Zookies (hybrid)🥮🥮🥮",
-                    "qty": 2,
-                    "subtotal": 24
-                },
-                {
-                    "item": "Bacio Gelato (hybrid)🍨🍨🍨",
-                    "qty": 2,
-                    "subtotal": 24
-                },
-                {
-                    "item": "Mimosa (hybrid)🌾🌾🌾",
-                    "qty": 1,
-                    "subtotal": 11
-                },
-                {
-                    "item": "Strawberry Kush (indica)🍓🍓🍓",
-                    "qty": 5,
-                    "subtotal": 50
-                },
-                {
-                    "item": "Miss Cookies (hybrid)🍪👸🍪",
-                    "qty": 1,
-                    "subtotal": 9
-                },
-                {
-                    "item": "Guanabana #2 (hybrid) 🍈🍈🍈",
-                    "qty": 1,
-                    "subtotal": 9
-                },
-                {
-                    "item": "Chocolope (sativa)🍫🍫🍫",
-                    "qty": 1,
-                    "subtotal": 8.5
-                },
-                {
-                    "item": "Enemy of the States (indica)🥧🥧🥧",
-                    "qty": 1,
-                    "subtotal": 8.5
-                }
-            ],
-            "total": 156,
+            "summary": [],
+            "total": 0,
             "created-at": "Mon Dec 13 2021 20:06:23 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Tue Dec 14 2021 16:01:58 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Tue Dec 14 2021 16:21:11 GMT+0100 (Central European Standard Time)",
             "id": "195221b0-7513-4565-97ff-73fa97e2a34e",
             "orders": {},
             "menu": {
@@ -245,108 +199,7 @@
                 "last-updated": "Mon Dec 13 2021 20:07:06 GMT+0100 (Central European Standard Time)",
                 "id": "abc3e24b-44d1-4f05-96ce-cb5d3b88af87"
             },
-            "rawOrders": [
-                [
-                    "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
-                    {
-                        "user": {
-                            "name": "mine",
-                            "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
-                        },
-                        "items": [
-                            {
-                                "item": "Blood Orange (hybrid)🍊🍊🍊",
-                                "qty": 1,
-                                "subtotal": 12
-                            },
-                            {
-                                "item": "Zookies (hybrid)🥮🥮🥮",
-                                "qty": 1,
-                                "subtotal": 12
-                            },
-                            {
-                                "item": "Bacio Gelato (hybrid)🍨🍨🍨",
-                                "qty": 1,
-                                "subtotal": 12
-                            },
-                            {
-                                "item": "Mimosa (hybrid)🌾🌾🌾",
-                                "qty": 1,
-                                "subtotal": 11
-                            }
-                        ],
-                        "total": 47,
-                        "created-at": "Tue Dec 14 2021 07:09:30 GMT+0100 (Central European Standard Time)",
-                        "last-updated": "Tue Dec 14 2021 12:28:49 GMT+0100 (Central European Standard Time)",
-                        "id": "3d939b34-baec-4022-b151-093089d8cfee"
-                    }
-                ],
-                [
-                    "cf4e1585-aa23-4645-8edd-1f16b09e1d7e",
-                    {
-                        "user": {
-                            "name": "Lucas",
-                            "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
-                        },
-                        "items": [
-                            {
-                                "item": "Bacio Gelato (hybrid)🍨🍨🍨",
-                                "qty": 1,
-                                "subtotal": 12
-                            },
-                            {
-                                "item": "Zookies (hybrid)🥮🥮🥮",
-                                "qty": 1,
-                                "subtotal": 12
-                            },
-                            {
-                                "item": "Strawberry Kush (indica)🍓🍓🍓",
-                                "qty": 5,
-                                "subtotal": 50
-                            }
-                        ],
-                        "total": 74,
-                        "created-at": "Tue Dec 14 2021 07:10:16 GMT+0100 (Central European Standard Time)",
-                        "last-updated": "Tue Dec 14 2021 12:29:38 GMT+0100 (Central European Standard Time)",
-                        "id": "73a76983-434f-4d2d-ba83-c8afe494d473"
-                    }
-                ],
-                [
-                    "11292c63-e903-454e-9988-46c069fd98e8",
-                    {
-                        "user": {
-                            "name": "Dani",
-                            "id": "11292c63-e903-454e-9988-46c069fd98e8"
-                        },
-                        "items": [
-                            {
-                                "item": "Miss Cookies (hybrid)🍪👸🍪",
-                                "qty": 1,
-                                "subtotal": 9
-                            },
-                            {
-                                "item": "Guanabana #2 (hybrid) 🍈🍈🍈",
-                                "qty": 1,
-                                "subtotal": 9
-                            },
-                            {
-                                "item": "Chocolope (sativa)🍫🍫🍫",
-                                "qty": 1,
-                                "subtotal": 8.5
-                            },
-                            {
-                                "item": "Enemy of the States (indica)🥧🥧🥧",
-                                "qty": 1,
-                                "subtotal": 8.5
-                            }
-                        ],
-                        "total": 35,
-                        "created-at": "Tue Dec 14 2021 16:01:58 GMT+0100 (Central European Standard Time)",
-                        "last-updated": "Tue Dec 14 2021 16:01:58 GMT+0100 (Central European Standard Time)",
-                        "id": "4ff750c4-4367-4f0e-b7d3-94c10d9cf7bd"
-                    }
-                ]
-            ]
+            "rawOrders": []
         }
     ]
 }
