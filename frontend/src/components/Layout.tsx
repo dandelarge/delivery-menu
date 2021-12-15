@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { AppBar, BottomNavigation, BottomNavigationAction, Box, Button, Container, IconButton, List, ListItem, Paper, Toolbar, Typography } from '@mui/material';
+import { Alert, AppBar, BottomNavigation, BottomNavigationAction, Box, Button, Container, IconButton, List, ListItem, Paper, Snackbar, Toolbar, Typography } from '@mui/material';
 import { Menu, Restore, Favorite, Archive } from '@mui/icons-material';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../providers/auth-provider';
@@ -15,10 +15,9 @@ export function Layout() {
   const auth = useAuth();
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSnackbarOpen, setIsSnackbarOpen] = useState(auth.authenticated);
 
-  const {userName, userId} = auth;
-
-  const { total } = useOrder();
+  const { total, hasChanges: hasOrderChanges } = useOrder();
 
   async function handleLogout() {
     await auth.logout();
@@ -29,6 +28,10 @@ export function Layout() {
     setIsSidebarOpen(newOpen);
   }
 
+  function handleSnackbarClose() {
+    setIsSnackbarOpen(false);
+  }
+
   return (<>
     <Box sx={{
       height: '100vh',
@@ -36,7 +39,7 @@ export function Layout() {
       flexDirection: 'column'
     }}>
       <Sidebar open={isSidebarOpen} onClose={() => toggleSidebar(false)}></Sidebar>
-      <AppBar position="sticky">
+      <AppBar position="sticky" color="secondary">
         <Toolbar>
           <IconButton
             size="large"
@@ -48,10 +51,7 @@ export function Layout() {
           >
             <Menu></Menu>
           </IconButton>
-          <Typography variant="body1" component="div" sx={{ flexGrow: 1 }}>
-            Welcome {userName}!
-          </Typography>
-          <Button onClick={handleLogout}>logout</Button>
+          <Button onClick={handleLogout} sx={{ml:'auto'}}>logout</Button>
         </Toolbar>
       </AppBar>
       <Container sx={{flexGrow: 1, mb: 8}}>
@@ -61,12 +61,24 @@ export function Layout() {
             <Outlet />
           </Box>
           <BottomDrawerProvider>
-            <SwipeableEdgeDrawer title={`total: ${total} €` }>
+            <SwipeableEdgeDrawer>
               <OrderSummary></OrderSummary>
             </SwipeableEdgeDrawer>
           </BottomDrawerProvider>
       </Container>
     </Box>
+    <Snackbar
+      anchorOrigin={{vertical:'top', horizontal:'center'}}
+      open={isSnackbarOpen}
+      autoHideDuration={3000}
+      onClose={handleSnackbarClose}
+    >
+      <Alert severity='success'>
+        <Typography variant="subtitle2">
+          Arriba las Marihuanas Joakin 🐒
+        </Typography>
+      </Alert>
+    </Snackbar>
   </>);
 }
 

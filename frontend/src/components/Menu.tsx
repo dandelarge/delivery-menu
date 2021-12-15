@@ -3,6 +3,7 @@ import { IconButton, MenuItem, Paper, Table, TableBody, TableCell, TableContaine
 import { Add, AddCircle, Remove, RemoveCircle } from '@mui/icons-material';
 import { client } from '../api-client';
 import { OrderItem, useOrder } from '../providers/order-provider';
+import { useMenu } from '../providers/menu-provider';
 
 export interface MenuItem {
   name: string;
@@ -44,24 +45,16 @@ const DataRow = ({
 };
 
 export const Menu = () => {
-  const [menu, setMenu] = useState<MenuData>();
-  const [priceMap, setPriceMap] = useState(new Map<string, number>());
+  const {items: menuItems, priceMap} = useMenu();
 
-
-  const {items, updateItems, updateTotal} = useOrder() || [];
-
-  const summaryMap = new Map();
-  items?.forEach( ({item, qty}) => summaryMap.set(item, qty));
+  const {items: orderItems, updateItems, updateTotal} = useOrder() || [];
 
   useEffect(() => {
-    client.get('menu').then( ({data}) => {
-      setMenu(data);
-      const priceMap = new Map<string, number>();
-      const items = data.items || [];
-      items.forEach( ({name, price}: MenuItem) => priceMap.set(name, price));
-      setPriceMap(priceMap);
-    });
-  }, []);
+    console.log(priceMap);
+  }, [priceMap])
+
+  const summaryMap = new Map();
+  orderItems?.forEach( ({item, qty}) => summaryMap.set(item, qty));
 
   function buildOrderSummary(map: Map<string, number>) {
     const orderSummary: any[] = [];
@@ -100,9 +93,6 @@ export const Menu = () => {
     updateTotal(total);
   }
 
-
-
-
   return (<>
     <Typography variant='h6' sx={{mt: 2, mb: 2}}>Menu 🍀🍀🍀</Typography>
 
@@ -116,7 +106,7 @@ export const Menu = () => {
               </TableRow>
           </TableHead>
           <TableBody>
-              {menu?.items && menu?.items?.map( ({name, price}) => {
+              {menuItems && menuItems?.map( ({name, price}) => {
                   return (<DataRow
                     onRemove={handleRemoveButtonClick}
                     onAdd={handleAddButtonClick}

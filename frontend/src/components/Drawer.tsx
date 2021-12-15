@@ -9,12 +9,12 @@ import Typography from '@mui/material/Typography';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import { ButtonGroup, Drawer } from '@mui/material';
 import { useBottomDrawer } from '../providers/bottom-drawer-provider';
+import { useOrder } from '../providers/order-provider';
 
 const drawerBleeding = 56;
 
 interface Props {
   children: JSX.Element;
-  title: string;
   window?: () => Window;
 }
 
@@ -52,6 +52,7 @@ const Puller = styled(Box)(({ theme }) => ({
 
 export function SwipeableEdgeDrawer(props: Props) {
   const { window } = props;
+  const { total, hasChanges: hasOrderChanges } = useOrder();
 
   const {bottomDrawerOpen, openBottomDrawer, closeBottomDrawer} = useBottomDrawer();
 
@@ -81,13 +82,15 @@ export function SwipeableEdgeDrawer(props: Props) {
           onClick={openBottomDrawer}
         >
           <Puller />
-          <Button
-            variant="text"
-            color="secondary"
-            sx={{ mx: 2, p: 2, alignSelf: 'flex-end'}}
-          >
-            {props.title}
-          </Button>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              p: 2
+            }}>
+            <Typography variant="h6" sx={{marginLeft:hasOrderChanges?0:'auto'}}>total: {total} €</Typography>
+            {hasOrderChanges && !bottomDrawerOpen && <Button variant="contained" color="primary" size="small" >Save the order</Button>}
+          </Box>
         </DrawerHeading>
         <StyledBox
           sx={{

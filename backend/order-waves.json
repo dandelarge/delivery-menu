@@ -200,6 +200,529 @@
                 "id": "abc3e24b-44d1-4f05-96ce-cb5d3b88af87"
             },
             "rawOrders": []
+        },
+        {
+            "handler": {
+                "name": "Lucas",
+                "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+            },
+            "order_before": "2021-12-19T17:30:26.000Z",
+            "summary": [],
+            "total": 0,
+            "created-at": "Tue Dec 14 2021 16:57:34 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Tue Dec 14 2021 16:57:34 GMT+0100 (Central European Standard Time)",
+            "id": "e7b66fa9-124d-4937-8aa6-33a2d6137da2",
+            "orders": {}
+        },
+        {
+            "handler": {
+                "name": "Lucas",
+                "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+            },
+            "order_before": "2021-12-19T11:01:33.000Z",
+            "summary": [],
+            "total": 0,
+            "created-at": "Tue Dec 14 2021 16:59:47 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Tue Dec 14 2021 16:59:47 GMT+0100 (Central European Standard Time)",
+            "id": "43f3feb2-454a-454d-9a4d-fe0ea518283b",
+            "orders": {}
+        },
+        {
+            "handler": {
+                "name": "mine",
+                "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+            },
+            "order_before": "2021-12-04T11:00:51.000Z",
+            "summary": [],
+            "total": 0,
+            "created-at": "Tue Dec 14 2021 17:08:59 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Tue Dec 14 2021 17:08:59 GMT+0100 (Central European Standard Time)",
+            "id": "0b4caab0-f0b6-482a-b6f2-12a9088f97f6",
+            "orders": {}
+        },
+        {
+            "handler": {
+                "name": "mine",
+                "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+            },
+            "order_before": "2021-12-19T17:00:15.000Z",
+            "summary": [],
+            "total": 0,
+            "created-at": "Tue Dec 14 2021 17:09:23 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Wed Dec 15 2021 15:47:49 GMT+0100 (Central European Standard Time)",
+            "id": "89a0f79e-a11d-4de6-b206-89e96f5a6ede",
+            "orders": {},
+            "menu": {
+                "items": [
+                    {
+                        "id": "Mimozz (hybrid)🍭🍭🍭12€",
+                        "name": "Mimozz (hybrid)🍭🍭🍭",
+                        "price": 12
+                    },
+                    {
+                        "id": "Blood Orange (hybrid)🍊🍊🍊12€",
+                        "name": "Blood Orange (hybrid)🍊🍊🍊",
+                        "price": 12
+                    },
+                    {
+                        "id": "Zookies (hybrid)🥮🥮🥮12€",
+                        "name": "Zookies (hybrid)🥮🥮🥮",
+                        "price": 12
+                    },
+                    {
+                        "id": "Bacio Gelato (hybrid)🍨🍨🍨12€",
+                        "name": "Bacio Gelato (hybrid)🍨🍨🍨",
+                        "price": 12
+                    },
+                    {
+                        "id": "Mimosa (hybrid)🌾🌾🌾11€",
+                        "name": "Mimosa (hybrid)🌾🌾🌾",
+                        "price": 11
+                    },
+                    {
+                        "id": "Gorilla Zkittlez (hybrid) 🦍🍊🦍11€",
+                        "name": "Gorilla Zkittlez (hybrid) 🦍🍊🦍",
+                        "price": 11
+                    },
+                    {
+                        "id": "Melonade (sativa)🍉🍉🍉10€",
+                        "name": "Melonade (sativa)🍉🍉🍉",
+                        "price": 10
+                    },
+                    {
+                        "id": "Strawberry Kush (indica)🍓🍓🍓10€",
+                        "name": "Strawberry Kush (indica)🍓🍓🍓",
+                        "price": 10
+                    },
+                    {
+                        "id": "L.A. Confidential (indica)🌃🌃🌃10€",
+                        "name": "L.A. Confidential (indica)🌃🌃🌃",
+                        "price": 10
+                    },
+                    {
+                        "id": "Shoreline (sativa)🍒🍒🍒10€",
+                        "name": "Shoreline (sativa)🍒🍒🍒",
+                        "price": 10
+                    },
+                    {
+                        "id": "Somari (indica)🥧🥧🥧9€",
+                        "name": "Somari (indica)🥧🥧🥧",
+                        "price": 9
+                    },
+                    {
+                        "id": "Miss Cookies (hybrid)🍪👸🍪9€",
+                        "name": "Miss Cookies (hybrid)🍪👸🍪",
+                        "price": 9
+                    },
+                    {
+                        "id": "Guanabana #2 (hybrid) 🍈🍈🍈9€",
+                        "name": "Guanabana #2 (hybrid) 🍈🍈🍈",
+                        "price": 9
+                    },
+                    {
+                        "id": "Chocolope (sativa)🍫🍫🍫8.5€",
+                        "name": "Chocolope (sativa)🍫🍫🍫",
+                        "price": 8.5
+                    },
+                    {
+                        "id": "Enemy of the States (indica)🥧🥧🥧8.5€",
+                        "name": "Enemy of the States (indica)🥧🥧🥧",
+                        "price": 8.5
+                    },
+                    {
+                        "id": "Lemon Kush (indica)🍋🌿🍋8.5€",
+                        "name": "Lemon Kush (indica)🍋🌿🍋",
+                        "price": 8.5
+                    },
+                    {
+                        "id": "Super Lemon Haze (sativa)🍋🍋🍋7€",
+                        "name": "Super Lemon Haze (sativa)🍋🍋🍋",
+                        "price": 7
+                    },
+                    {
+                        "id": "Super Silver Haze (sativa) 🐊🐊🐊7€",
+                        "name": "Super Silver Haze (sativa) 🐊🐊🐊",
+                        "price": 7
+                    },
+                    {
+                        "id": "Skunk (indica)🦨🦨🦨7€",
+                        "name": "Skunk (indica)🦨🦨🦨",
+                        "price": 7
+                    },
+                    {
+                        "id": "Mix Buds 🇳🇱🇳🇱🇳🇱 6€",
+                        "name": "Mix Buds 🇳🇱🇳🇱🇳🇱 ",
+                        "price": 6
+                    },
+                    {
+                        "id": "Gelato Triple Filtred 🍧🍧🍧15€",
+                        "name": "Gelato Triple Filtred 🍧🍧🍧",
+                        "price": 15
+                    },
+                    {
+                        "id": "Lemonchello Triple Filtred🍋🍋🍋15€",
+                        "name": "Lemonchello Triple Filtred🍋🍋🍋",
+                        "price": 15
+                    },
+                    {
+                        "id": "Mandalina Triple Filtred 🍊🍊🍊15€",
+                        "name": "Mandalina Triple Filtred 🍊🍊🍊",
+                        "price": 15
+                    },
+                    {
+                        "id": "Barbara Peach Triple Filtred 🍑🍑🍑 15€",
+                        "name": "Barbara Peach Triple Filtred 🍑🍑🍑 ",
+                        "price": 15
+                    },
+                    {
+                        "id": "Kit & Kat Double Filtred + Wax 🍫🍫🍫13.5€",
+                        "name": "Kit & Kat Double Filtred + Wax 🍫🍫🍫",
+                        "price": 13.5
+                    },
+                    {
+                        "id": "Biscotti Eggs Double Filtred 🍪🍪🍪 13.5€",
+                        "name": "Biscotti Eggs Double Filtred 🍪🍪🍪 ",
+                        "price": 13.5
+                    },
+                    {
+                        "id": "Mandarina Eggs Double Filtred 🍊🍊🍊13.5€",
+                        "name": "Mandarina Eggs Double Filtred 🍊🍊🍊",
+                        "price": 13.5
+                    },
+                    {
+                        "id": "Gorilla Zkittlez Eggs Double Filtred🦍🍊🦍13.5€",
+                        "name": "Gorilla Zkittlez Eggs Double Filtred🦍🍊🦍",
+                        "price": 13.5
+                    },
+                    {
+                        "id": "Golden States Eggs Double Filtred 🍌🍌🍌12.5€",
+                        "name": "Golden States Eggs Double Filtred 🍌🍌🍌",
+                        "price": 12.5
+                    },
+                    {
+                        "id": "Banana Kush Refiltred 🍌☘️🍌12€",
+                        "name": "Banana Kush Refiltred 🍌☘️🍌",
+                        "price": 12
+                    },
+                    {
+                        "id": "Gorilla Kush Blond Refiltred 🦍☘️🦍10€",
+                        "name": "Gorilla Kush Blond Refiltred 🦍☘️🦍",
+                        "price": 10
+                    },
+                    {
+                        "id": "Banana Punch Refiltred 🍌🍌🍌10€",
+                        "name": "Banana Punch Refiltred 🍌🍌🍌",
+                        "price": 10
+                    },
+                    {
+                        "id": "Bluberry Kush Filtred Hash 🍒🍓🍒7.5€",
+                        "name": "Bluberry Kush Filtred Hash 🍒🍓🍒",
+                        "price": 7.5
+                    },
+                    {
+                        "id": "Mango Kush Filtred Hash🥭🥭🥭7.5€",
+                        "name": "Mango Kush Filtred Hash🥭🥭🥭",
+                        "price": 7.5
+                    },
+                    {
+                        "id": "Phineapple Express Pollinetor Hash 🍍🍍🍍7€",
+                        "name": "Phineapple Express Pollinetor Hash 🍍🍍🍍",
+                        "price": 7
+                    },
+                    {
+                        "id": "Orange Bud Maroccan Hash 🍊🍊🍊7€",
+                        "name": "Orange Bud Maroccan Hash 🍊🍊🍊",
+                        "price": 7
+                    }
+                ],
+                "created-at": "Wed Dec 15 2021 15:47:49 GMT+0100 (Central European Standard Time)",
+                "last-updated": "Wed Dec 15 2021 15:47:49 GMT+0100 (Central European Standard Time)",
+                "id": "accb1b75-16d3-4701-9e5c-9d8d4041fe67"
+            },
+            "rawOrders": []
+        },
+        {
+            "handler": {
+                "name": "mine",
+                "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+            },
+            "order_before": "2021-12-15T15:08:04.013Z",
+            "summary": [
+                {
+                    "item": "Mandarina Eggs Double Filtred 🍊🍊🍊",
+                    "qty": 1,
+                    "subtotal": 13.5
+                },
+                {
+                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Bacio Gelato (hybrid)🍨🍨🍨",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Shoreline (sativa)🍒🍒🍒",
+                    "qty": 5,
+                    "subtotal": 50
+                },
+                {
+                    "item": "Somari (indica)🥧🥧🥧",
+                    "qty": 4,
+                    "subtotal": 36
+                }
+            ],
+            "total": 123.5,
+            "created-at": "Wed Dec 15 2021 16:08:05 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Wed Dec 15 2021 20:29:13 GMT+0100 (Central European Standard Time)",
+            "id": "850d0e02-897e-4c3e-927a-66facdb69e00",
+            "orders": {},
+            "menu": {
+                "items": [
+                    {
+                        "id": "Mimozz (hybrid)🍭🍭🍭12€",
+                        "name": "Mimozz (hybrid)🍭🍭🍭",
+                        "price": 12
+                    },
+                    {
+                        "id": "Blood Orange (hybrid)🍊🍊🍊12€",
+                        "name": "Blood Orange (hybrid)🍊🍊🍊",
+                        "price": 12
+                    },
+                    {
+                        "id": "Zookies (hybrid)🥮🥮🥮12€",
+                        "name": "Zookies (hybrid)🥮🥮🥮",
+                        "price": 12
+                    },
+                    {
+                        "id": "Bacio Gelato (hybrid)🍨🍨🍨12€",
+                        "name": "Bacio Gelato (hybrid)🍨🍨🍨",
+                        "price": 12
+                    },
+                    {
+                        "id": "Mimosa (hybrid)🌾🌾🌾11€",
+                        "name": "Mimosa (hybrid)🌾🌾🌾",
+                        "price": 11
+                    },
+                    {
+                        "id": "Gorilla Zkittlez (hybrid) 🦍🍊🦍11€",
+                        "name": "Gorilla Zkittlez (hybrid) 🦍🍊🦍",
+                        "price": 11
+                    },
+                    {
+                        "id": "Melonade (sativa)🍉🍉🍉10€",
+                        "name": "Melonade (sativa)🍉🍉🍉",
+                        "price": 10
+                    },
+                    {
+                        "id": "Strawberry Kush (indica)🍓🍓🍓10€",
+                        "name": "Strawberry Kush (indica)🍓🍓🍓",
+                        "price": 10
+                    },
+                    {
+                        "id": "L.A. Confidential (indica)🌃🌃🌃10€",
+                        "name": "L.A. Confidential (indica)🌃🌃🌃",
+                        "price": 10
+                    },
+                    {
+                        "id": "Shoreline (sativa)🍒🍒🍒10€",
+                        "name": "Shoreline (sativa)🍒🍒🍒",
+                        "price": 10
+                    },
+                    {
+                        "id": "Somari (indica)🥧🥧🥧9€",
+                        "name": "Somari (indica)🥧🥧🥧",
+                        "price": 9
+                    },
+                    {
+                        "id": "Miss Cookies (hybrid)🍪👸🍪9€",
+                        "name": "Miss Cookies (hybrid)🍪👸🍪",
+                        "price": 9
+                    },
+                    {
+                        "id": "Guanabana #2 (hybrid) 🍈🍈🍈9€",
+                        "name": "Guanabana #2 (hybrid) 🍈🍈🍈",
+                        "price": 9
+                    },
+                    {
+                        "id": "Chocolope (sativa)🍫🍫🍫8.5€",
+                        "name": "Chocolope (sativa)🍫🍫🍫",
+                        "price": 8.5
+                    },
+                    {
+                        "id": "Enemy of the States (indica)🥧🥧🥧8.5€",
+                        "name": "Enemy of the States (indica)🥧🥧🥧",
+                        "price": 8.5
+                    },
+                    {
+                        "id": "Lemon Kush (indica)🍋🌿🍋8.5€",
+                        "name": "Lemon Kush (indica)🍋🌿🍋",
+                        "price": 8.5
+                    },
+                    {
+                        "id": "Super Lemon Haze (sativa)🍋🍋🍋7€",
+                        "name": "Super Lemon Haze (sativa)🍋🍋🍋",
+                        "price": 7
+                    },
+                    {
+                        "id": "Super Silver Haze (sativa) 🐊🐊🐊7€",
+                        "name": "Super Silver Haze (sativa) 🐊🐊🐊",
+                        "price": 7
+                    },
+                    {
+                        "id": "Skunk (indica)🦨🦨🦨7€",
+                        "name": "Skunk (indica)🦨🦨🦨",
+                        "price": 7
+                    },
+                    {
+                        "id": "Mix Buds 🇳🇱🇳🇱🇳🇱 6€",
+                        "name": "Mix Buds 🇳🇱🇳🇱🇳🇱 ",
+                        "price": 6
+                    },
+                    {
+                        "id": "Gelato Triple Filtred 🍧🍧🍧15€",
+                        "name": "Gelato Triple Filtred 🍧🍧🍧",
+                        "price": 15
+                    },
+                    {
+                        "id": "Lemonchello Triple Filtred🍋🍋🍋15€",
+                        "name": "Lemonchello Triple Filtred🍋🍋🍋",
+                        "price": 15
+                    },
+                    {
+                        "id": "Mandalina Triple Filtred 🍊🍊🍊15€",
+                        "name": "Mandalina Triple Filtred 🍊🍊🍊",
+                        "price": 15
+                    },
+                    {
+                        "id": "Barbara Peach Triple Filtred 🍑🍑🍑 15€",
+                        "name": "Barbara Peach Triple Filtred 🍑🍑🍑 ",
+                        "price": 15
+                    },
+                    {
+                        "id": "Kit & Kat Double Filtred + Wax 🍫🍫🍫13.5€",
+                        "name": "Kit & Kat Double Filtred + Wax 🍫🍫🍫",
+                        "price": 13.5
+                    },
+                    {
+                        "id": "Biscotti Eggs Double Filtred 🍪🍪🍪 13.5€",
+                        "name": "Biscotti Eggs Double Filtred 🍪🍪🍪 ",
+                        "price": 13.5
+                    },
+                    {
+                        "id": "Mandarina Eggs Double Filtred 🍊🍊🍊13.5€",
+                        "name": "Mandarina Eggs Double Filtred 🍊🍊🍊",
+                        "price": 13.5
+                    },
+                    {
+                        "id": "Gorilla Zkittlez Eggs Double Filtred🦍🍊🦍13.5€",
+                        "name": "Gorilla Zkittlez Eggs Double Filtred🦍🍊🦍",
+                        "price": 13.5
+                    },
+                    {
+                        "id": "Golden States Eggs Double Filtred 🍌🍌🍌12.5€",
+                        "name": "Golden States Eggs Double Filtred 🍌🍌🍌",
+                        "price": 12.5
+                    },
+                    {
+                        "id": "Banana Kush Refiltred 🍌☘️🍌12€",
+                        "name": "Banana Kush Refiltred 🍌☘️🍌",
+                        "price": 12
+                    },
+                    {
+                        "id": "Gorilla Kush Blond Refiltred 🦍☘️🦍10€",
+                        "name": "Gorilla Kush Blond Refiltred 🦍☘️🦍",
+                        "price": 10
+                    },
+                    {
+                        "id": "Banana Punch Refiltred 🍌🍌🍌10€",
+                        "name": "Banana Punch Refiltred 🍌🍌🍌",
+                        "price": 10
+                    },
+                    {
+                        "id": "Bluberry Kush Filtred Hash 🍒🍓🍒7.5€",
+                        "name": "Bluberry Kush Filtred Hash 🍒🍓🍒",
+                        "price": 7.5
+                    },
+                    {
+                        "id": "Mango Kush Filtred Hash🥭🥭🥭7.5€",
+                        "name": "Mango Kush Filtred Hash🥭🥭🥭",
+                        "price": 7.5
+                    },
+                    {
+                        "id": "Phineapple Express Pollinetor Hash 🍍🍍🍍7€",
+                        "name": "Phineapple Express Pollinetor Hash 🍍🍍🍍",
+                        "price": 7
+                    },
+                    {
+                        "id": "Orange Bud Maroccan Hash 🍊🍊🍊7€",
+                        "name": "Orange Bud Maroccan Hash 🍊🍊🍊",
+                        "price": 7
+                    }
+                ],
+                "created-at": "Wed Dec 15 2021 16:08:20 GMT+0100 (Central European Standard Time)",
+                "last-updated": "Wed Dec 15 2021 16:08:20 GMT+0100 (Central European Standard Time)",
+                "id": "f565c935-a4ad-476c-81a7-83c443a4b541"
+            },
+            "rawOrders": [
+                [
+                    "4e08fb95-b19f-416a-8d57-c6b2f584fc5d",
+                    {
+                        "user": {
+                            "name": "mine",
+                            "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+                        },
+                        "items": [
+                            {
+                                "item": "Mandarina Eggs Double Filtred 🍊🍊🍊",
+                                "qty": 1,
+                                "subtotal": 13.5
+                            },
+                            {
+                                "item": "Zookies (hybrid)🥮🥮🥮",
+                                "qty": 1,
+                                "subtotal": 12
+                            },
+                            {
+                                "item": "Bacio Gelato (hybrid)🍨🍨🍨",
+                                "qty": 1,
+                                "subtotal": 12
+                            }
+                        ],
+                        "total": 37.5,
+                        "created-at": "Wed Dec 15 2021 18:30:59 GMT+0100 (Central European Standard Time)",
+                        "last-updated": "Wed Dec 15 2021 20:28:46 GMT+0100 (Central European Standard Time)",
+                        "id": "c5668eb7-d429-451a-a1ab-18211e0db186"
+                    }
+                ],
+                [
+                    "cf4e1585-aa23-4645-8edd-1f16b09e1d7e",
+                    {
+                        "user": {
+                            "name": "Lucas",
+                            "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+                        },
+                        "items": [
+                            {
+                                "item": "Shoreline (sativa)🍒🍒🍒",
+                                "qty": 5,
+                                "subtotal": 50
+                            },
+                            {
+                                "item": "Somari (indica)🥧🥧🥧",
+                                "qty": 4,
+                                "subtotal": 36
+                            }
+                        ],
+                        "total": 86,
+                        "created-at": "Wed Dec 15 2021 20:29:13 GMT+0100 (Central European Standard Time)",
+                        "last-updated": "Wed Dec 15 2021 20:29:13 GMT+0100 (Central European Standard Time)",
+                        "id": "aea3413d-71a6-4a47-9841-83a498f463ee"
+                    }
+                ]
+            ]
         }
     ]
 }

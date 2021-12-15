@@ -13,6 +13,7 @@ export interface OrderContextType {
   user: string;
   items?: OrderItem[];
   total: number;
+  hasChanges: boolean;
   updateItems: (items: OrderItem[]) => void;
   updateTotal: (total: number) => void;
   saveOrder: () => Promise<void>;
@@ -26,9 +27,16 @@ export function OrderProvider({children}: {children: JSX.Element}) {
   const [user, setUser] = useState('');
   const [items, setItems] = useState<OrderItem[]>([{item: ''}]);
   const [total, setTotal] = useState(0);
+  const [hasChanges, setHasChanges] = useState(false);
 
-  const updateItems = (items: OrderItem[]) => setItems(items);
-  const updateTotal = (number: number) => setTotal(number);
+  const updateItems = (items: OrderItem[]) => {
+    setItems(items);
+    setHasChanges(true);
+  }
+  const updateTotal = (number: number) => {
+    setTotal(number);
+    setHasChanges(true);
+  }
 
 
   const fetchOrder = () => client.get('/orders').then(({data}) => {
@@ -41,6 +49,7 @@ export function OrderProvider({children}: {children: JSX.Element}) {
     setUser(data.user.username);
     setItems(data.items);
     setTotal(data.total);
+    setHasChanges(false);
   });
 
   useEffect(() => {
@@ -50,17 +59,15 @@ export function OrderProvider({children}: {children: JSX.Element}) {
   }, []);
 
   const saveOrder = async () => {
-
     const {data} = await client({
       url: '/orders',
       method: 'PATCH',
       data: { items},
     });
-
     setId(data.id);
     setItems(data.items);
     setTotal(data.total);
-
+    setHasChanges(false);
   };
 
   const value = {
@@ -71,7 +78,8 @@ export function OrderProvider({children}: {children: JSX.Element}) {
     updateItems,
     updateTotal,
     saveOrder,
-    fetchOrder
+    fetchOrder,
+    hasChanges
   }
 
   return <OrderContext.Provider value={value}>{children}</OrderContext.Provider>

@@ -1,25 +1,30 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Divider, Typography } from '@mui/material';
 import { useOrderWave } from '../providers/orderwave-provider';
 import { useAuth } from '../providers/auth-provider';
 
 function getDayNumberWord(dayNumber?: number): string {
 
-  if (!dayNumber || dayNumber > 7 || dayNumber < 1) {
+  if (
+    dayNumber === undefined
+    || dayNumber === null
+    || dayNumber > 6
+    || dayNumber < 0
+  ) {
     return 'Danielsday';
   }
 
-  const daysMap = new Map<number, string>([
-    [1, "Monday"],
-    [2, "Tuesday"],
-    [3, "Wednesday"],
-    [4, "Thursday"],
-    [5, "Friyay"],
-    [6, "Saturday"],
-    [7, "Sunday"]
+  const daysMap = new Map<string, string>([
+    ["2", "Monday"],
+    ["3", "Tuesday"],
+    ["4", "Wednesday"],
+    ["5", "Thursday"],
+    ["6", "Friyay"],
+    ["7", "Saturday"],
+    ["1", "Sunday"]
   ]);
 
-  return daysMap.get(dayNumber) || 'Danielsday';
+  return daysMap.get(String(dayNumber + 1)) || 'Danielsday';
 }
 
 function setTwoDigits(digit: number) {
@@ -46,7 +51,9 @@ export function OrderWaveDetails() {
   const orderClosingTime = getHoursAndMinutes(orderDate);
 
   return (<>
-    <Typography variant="h6" component="div">{handler === userName ? 'You are': `${handler} is`} ordering on {dayOfTheWeek}</Typography>
-    <Typography variant="body1"> Order before {orderClosingTime}</Typography>
+    <Typography variant="h5">{handler === userName ? 'You are': `${handler} is`} ordering on </Typography>
+    <Typography variant="h5" color="primary" sx={{mb:2}}>{dayOfTheWeek}</Typography>
+    <Divider />
+    <Typography sx={{my:2}}> Order before {orderClosingTime}</Typography>
   </>);
 }

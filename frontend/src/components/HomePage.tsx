@@ -28,14 +28,13 @@ export function HomePage() {
   const showhandlerDetails = () => isHandler() && userName === handler;
 
   return (<>
-    <Typography variant="h6" sx={{mb: 2, mt: 2}}>Home Page</Typography>
-      <ActionsPanel>
-        <OrderWaveDetails />
-      </ActionsPanel>
-      {!!items?.length && <OwnOrderSummary />}
-      {showhandlerDetails() && <>
-        <OrderWaveSummary />
-        <OrderWaveOrders />
-      </>}
+    <ActionsPanel>
+      <OrderWaveDetails />
+    </ActionsPanel>
+    {!!items?.length && <OwnOrderSummary />}
+    {showhandlerDetails() && <>
+      <OrderWaveSummary />
+      <OrderWaveOrders />
+    </>}
   </>);
 }

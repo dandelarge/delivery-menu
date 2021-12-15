@@ -17,6 +17,7 @@ import DateAdapter from '@mui/lab/AdapterDateFns';
 import { LocalizationProvider } from '@mui/lab';
 import MakeOrderWave from './components/MakeOrderWave';
 import CreateMenu from './components/CreateMenu';
+import { MenuProvider } from './providers/menu-provider';
 
 
 function handleMenuCreated(items: MenuItem[]) {
@@ -36,9 +37,11 @@ function App() {
                   <RequireAuth>
                     <OrderWaveProvider>
                       <OrderProvider>
-                        <LocalizationProvider dateAdapter={DateAdapter}>
-                          <Layout />
-                        </LocalizationProvider>
+                        <MenuProvider>
+                          <LocalizationProvider dateAdapter={DateAdapter}>
+                            <Layout />
+                          </LocalizationProvider>
+                        </MenuProvider>
                       </OrderProvider>
                     </OrderWaveProvider>
                   </RequireAuth>

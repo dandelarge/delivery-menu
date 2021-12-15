@@ -2,6 +2,7 @@ import { FormControl, TextField, Button, Card, CardContent } from '@mui/material
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router';
 import { client } from '../api-client';
+import { useMenu } from '../providers/menu-provider';
 import { useOrder } from '../providers/order-provider';
 import { useOrderWave } from '../providers/orderwave-provider';
 import { MenuItem } from './Menu';
@@ -52,9 +53,10 @@ export default function CreateMenu(): JSX.Element {
   const { fetchOrderWave } = useOrderWave();
   const { fetchOrder } = useOrder();
   const navigate = useNavigate();
+  const { updateMenu } = useMenu();
 
   function onMenuCreated(items: MenuItem[]) {
-    client.post('/menu', {items}).then(() => {
+    updateMenu(items).then(() => {
       if(fetchOrderWave) fetchOrderWave();
       fetchOrder();
       navigate('/menu');

@@ -12,16 +12,16 @@ export function ActionsPanel({children}:{children: JSX.Element}) {
 
   const showhandlerDetails = () => isHandler() && userName === handler;
 
-  return (<Card sx={{mb: 2}}>
+  return (<Card sx={{my: 2}}>
     <CardContent>
       {children}
-      <Stack alignContent="start">
-      { showhandlerDetails() && <Button size="small" to={`/create-menu`} component={RouterLink} >change the Menu</Button> }
-      { isHandler() && <Button size="small" color="warning" to={`/make-orderwave`} component={RouterLink}>Make new OrderWave</Button> }
+      <Stack>
+      { showhandlerDetails() && <Button sx={{my:1}} size="small" to={`/create-menu`} component={RouterLink} >change the Menu</Button> }
+      { isHandler() && <Button sx={{my:1}} size="small" color="secondary" to={`/make-orderwave`} component={RouterLink}>Make new OrderWave</Button> }
       </Stack>
     </CardContent>
     <CardActions>
-      <Button size="small" to={`/menu`} component={RouterLink}>
+      <Button size="small" to={`/menu`} component={RouterLink} sx={{ml: 'auto'}}>
           Menu
       </Button>
     </CardActions>
