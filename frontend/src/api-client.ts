@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosRequestHeaders } from 'axios';
 
-const baseURL = process.env.NODE_ENV === 'production' ? '': 'http://localhost:3012/';
+const baseURL = process.env.NODE_ENV === 'production' ? '': 'http://192.168.1.14:3012/';
 
 export function getAccessTokenFromLocalStorage() {
   return localStorage.getItem('access_token');

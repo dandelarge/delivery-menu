@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { client } from "../api-client";
-import { MenuData, MenuItem } from "../components/Menu";
-import { OrderItem } from "./orderwave-provider";
+import { MenuItem } from "../components/Menu";
 
 interface MenuContextType {
   items: MenuItem[];
@@ -18,18 +17,16 @@ export function MenuProvider({children}: {children: JSX.Element}) {
 
   const fetchMenu = async () => client.get('menu').then( ({data}) => {
     const map = new Map<string, number>();
-
     setItems(data.items || []);
     data.items.forEach( ({name, price}: MenuItem) => map.set(name, price));
     setPriceMap(map);
-    console.log(data.items, priceMap, map);
   });
 
   const updateMenu = async (items: MenuItem[]) => client.post('/menu', {items})
     .then(() => fetchMenu());
 
-  useEffect(() => {
-    fetchMenu();
+  useEffect((fetch: () => Promise<void> = fetchMenu) => {
+    fetch();
   }, [])
 
   const value = {

@@ -1,5 +1,4 @@
-import { Stop } from '@mui/icons-material';
-import { Alert, AlertColor, Button, Card, Container, FormControl, Snackbar, Stack, styled, TextField, Typography } from '@mui/material';
+import { Alert, AlertColor, AlertTitle, Button, Container, Snackbar, styled, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, {useEffect, useState} from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -34,10 +33,8 @@ export const Login = () => {
 
   const [severity, setSeverity] = useState('error');
   const [alertText, setAlertText] = useState('');
-  const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
-  const [messageDuration, setMessageDuration] = useState(3000);
-
-  const [hasError, setHasError] = useState(auth.hasError);
+  const [isSnackbarOpen, setIsSnackbarOpen] = useState(auth.hasError);
+  const [messageDuration, setMessageDuration] = useState(4000);
 
   useEffect(() => {
     if (auth.authenticated) {
@@ -45,12 +42,12 @@ export const Login = () => {
     }
     setSeverity('success');
     setAlertText('See you Soon 🐒');
+    setMessageDuration(2000);
     setIsSnackbarOpen(true);
-  }, [auth.authenticated]);
+  }, [auth.authenticated, navigate, from]);
 
   useEffect(() => {
     if(!auth.hasError) return;
-    setHasError(auth.hasError);
     setSeverity('error');
     setAlertText('wrong credentials 🙈');
     setIsSnackbarOpen(true);
@@ -63,7 +60,7 @@ export const Login = () => {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    auth.login(user, pass).then(() => setHasError(auth.hasError));
+    auth.login(user, pass).then(() => setIsSnackbarOpen(auth.hasError));
   }
 
 
@@ -71,11 +68,13 @@ export const Login = () => {
     <Container maxWidth="xs">
       <Snackbar
         anchorOrigin={{vertical:'top', horizontal:'center'}}
-        open={hasError}
+        open={isSnackbarOpen}
         autoHideDuration={messageDuration}
         onClose={handleSnackbarClose}
       >
-        <Alert severity={(severity as AlertColor)}>{alertText}</Alert>
+        <Alert severity={(severity as AlertColor)} sx={{mt: 4}} variant='outlined'>
+          <AlertTitle>{alertText}</AlertTitle>
+        </Alert>
       </Snackbar>
       <Box sx={{
         height: '100vh',

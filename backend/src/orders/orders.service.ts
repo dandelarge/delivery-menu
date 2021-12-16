@@ -53,7 +53,8 @@ export class OrdersService {
     const {menu, orders} = this.orderWaveService.findLatest();
     if (!menu) { return null}
 
-    const [updatedOrderItems, orderTotal] = this.calculateTotal(orderData.items, menu.items);
+    const filteredItems = orderData.items.filter( item => item.qty > 0);
+    const [updatedOrderItems, orderTotal] = this.calculateTotal(filteredItems, menu.items);
     const currentUserOrder = orders.get(userId);
     const updatedOrder: OrderModel = {
       ...currentUserOrder,

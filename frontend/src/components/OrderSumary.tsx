@@ -1,16 +1,14 @@
-import { Box, Button, List, ListItem, Typography } from '@mui/material';
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Box, Button } from '@mui/material';
 import { useBottomDrawer } from '../providers/bottom-drawer-provider';
 import { useOrder } from '../providers/order-provider';
 import SummaryList from './SummaryList';
 import { useOrderWave } from '../providers/orderwave-provider';
 import { useNavigate } from 'react-router-dom';
 
-
-
 export function OrderSummary() {
   const {fetchOrderWave} = useOrderWave();
-  const {items, saveOrder} = useOrder();
+  const {items, saveOrder, updateItems, updateTotal} = useOrder();
   const {closeBottomDrawer} = useBottomDrawer();
   const navigate = useNavigate();
 
@@ -21,6 +19,11 @@ export function OrderSummary() {
     navigate('/');
   }
 
+  function handleDeleteButtonClick() {
+    updateItems([]);
+    updateTotal(0);
+  }
+
 
   return (<>
     <Box sx={{
@@ -28,18 +31,30 @@ export function OrderSummary() {
       textAlign: 'right',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
       }}
     >
       <SummaryList items={items || []} />
-      <Button
-        onClick={handleSaveButtonClick}
-        variant="contained"
-        color="secondary"
-        sx={{ml: 'auto'}}
-      >
-        Save The order
-      </Button>
+      <Box sx={{
+        display:'flex',
+        justifyContent: 'space-between',
+        flexDirection: 'row-reverse'
+      }}>
+        <Button
+          onClick={handleSaveButtonClick}
+          variant="contained"
+          color="secondary"
+        >
+          Save The order
+        </Button>
+        { items && items.length > 0 && <Button
+          onClick={handleDeleteButtonClick}
+          variant="contained"
+          color="error"
+        >
+          delete all
+        </Button>}
+      </Box>
     </Box>
 </>);
 }

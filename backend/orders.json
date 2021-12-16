@@ -52,11 +52,26 @@
                     "item": "Bacio Gelato (hybrid)🍨🍨🍨",
                     "qty": 1,
                     "subtotal": 12
+                },
+                {
+                    "item": "Mimosa (hybrid)🌾🌾🌾",
+                    "qty": 1,
+                    "subtotal": 11
+                },
+                {
+                    "item": "Gorilla Zkittlez (hybrid) 🦍🍊🦍",
+                    "qty": 1,
+                    "subtotal": 11
+                },
+                {
+                    "item": "Melonade (sativa)🍉🍉🍉",
+                    "qty": 1,
+                    "subtotal": 10
                 }
             ],
-            "total": 37.5,
+            "total": 69.5,
             "created-at": "Wed Dec 15 2021 18:30:59 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Wed Dec 15 2021 20:28:46 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Wed Dec 15 2021 22:44:44 GMT+0100 (Central European Standard Time)",
             "id": "c5668eb7-d429-451a-a1ab-18211e0db186"
         },
         {
@@ -80,6 +95,82 @@
             "created-at": "Wed Dec 15 2021 20:29:13 GMT+0100 (Central European Standard Time)",
             "last-updated": "Wed Dec 15 2021 20:29:13 GMT+0100 (Central European Standard Time)",
             "id": "aea3413d-71a6-4a47-9841-83a498f463ee"
+        },
+        {
+            "user": {
+                "name": "mine",
+                "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+            },
+            "items": [],
+            "total": 0,
+            "created-at": "Wed Dec 15 2021 23:21:15 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 16 2021 02:48:50 GMT+0100 (Central European Standard Time)",
+            "id": "8b0b984d-f4af-4849-9fda-6bd49139b70a"
+        },
+        {
+            "user": {
+                "name": "Lucas",
+                "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+            },
+            "items": [
+                {
+                    "item": "Kosher Kush (indica)🕍🕍🕍",
+                    "qty": 2,
+                    "subtotal": 24
+                },
+                {
+                    "item": "Bruce Banner (sativa)☘️🤬☘️",
+                    "qty": 3,
+                    "subtotal": 30
+                },
+                {
+                    "item": "Mimosa (hybrid) 🌾🌾🌾 ",
+                    "qty": 1,
+                    "subtotal": 10
+                },
+                {
+                    "item": "Bubble Kush (indica) 🍓🍓🍓",
+                    "qty": 3,
+                    "subtotal": 25.5
+                }
+            ],
+            "total": 89.5,
+            "created-at": "Thu Dec 16 2021 01:54:54 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 16 2021 02:03:07 GMT+0100 (Central European Standard Time)",
+            "id": "9a1876c1-cbbf-4d7a-a40c-057fef478504"
+        },
+        {
+            "user": {
+                "name": "mine",
+                "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
+            },
+            "items": [],
+            "total": 0,
+            "created-at": "Thu Dec 16 2021 02:49:05 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 16 2021 02:59:23 GMT+0100 (Central European Standard Time)",
+            "id": "6d9f7a32-bef8-454e-9b29-7eddc874e639"
+        },
+        {
+            "user": {
+                "name": "Dani",
+                "id": "11292c63-e903-454e-9988-46c069fd98e8"
+            },
+            "items": [
+                {
+                    "item": "Blood Orange (hybrid)🍊🍊🍊",
+                    "qty": 5,
+                    "subtotal": 60
+                },
+                {
+                    "item": "Bacio Gelato (hybrid)🍨🍨🍨",
+                    "qty": 6,
+                    "subtotal": 72
+                }
+            ],
+            "total": 132,
+            "created-at": "Thu Dec 16 2021 13:36:08 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 16 2021 13:36:08 GMT+0100 (Central European Standard Time)",
+            "id": "19766fa0-71e8-4191-bdef-7e8a6984d44c"
         }
     ]
 }

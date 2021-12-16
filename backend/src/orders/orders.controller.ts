@@ -25,12 +25,14 @@ export class OrdersController {
     const user = req.user;
     const { items } = req.body as CreateOrderDto;
 
+    const filteredItems = items.filter(item => item.qty > 0);
+    console.log(filteredItems);
     const order: OrderModel = {
       user: {
         name: user.username,
         id: user.userId
       },
-      items
+      items: filteredItems
     }
 
     const {id, orders} = this.orderWaveService.findLatest();

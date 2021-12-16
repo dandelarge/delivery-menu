@@ -1,11 +1,8 @@
 import React, { useEffect, useState }from 'react';
-import { Button, Card, CardContent, List, ListItem, Stack, Typography } from '@mui/material';
-import { useAuth } from '../providers/auth-provider';
+import { Card, CardContent, List, ListItem, Stack, Typography } from '@mui/material';
 import { client } from '../api-client';
-import { useNavigate } from 'react-router-dom';
 
 export function Users() {
-  const auth = useAuth();
   const [users, setUsers] = useState([]);
 
   useEffect(() => {

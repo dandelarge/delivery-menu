@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Alert, AppBar, BottomNavigation, BottomNavigationAction, Box, Button, Container, IconButton, List, ListItem, Paper, Snackbar, Toolbar, Typography } from '@mui/material';
-import { Menu, Restore, Favorite, Archive } from '@mui/icons-material';
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Alert, AppBar, Box, Button, Container, IconButton, Snackbar, Toolbar, Typography } from '@mui/material';
+import { Menu } from '@mui/icons-material';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../providers/auth-provider';
 import { SwipeableEdgeDrawer } from './Drawer';
-import { useOrder } from '../providers/order-provider';
 import { OrderSummary } from './OrderSumary';
 import { Sidebar } from './Sidebar';
 import { BottomDrawerProvider } from '../providers/bottom-drawer-provider';
@@ -17,7 +16,6 @@ export function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSnackbarOpen, setIsSnackbarOpen] = useState(auth.authenticated);
 
-  const { total, hasChanges: hasOrderChanges } = useOrder();
 
   async function handleLogout() {
     await auth.logout();
@@ -36,7 +34,8 @@ export function Layout() {
     <Box sx={{
       height: '100vh',
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      backgroundImage: 'url(/psychedelyc.jpg)'
     }}>
       <Sidebar open={isSidebarOpen} onClose={() => toggleSidebar(false)}></Sidebar>
       <AppBar position="sticky" color="secondary">
@@ -70,7 +69,7 @@ export function Layout() {
     <Snackbar
       anchorOrigin={{vertical:'top', horizontal:'center'}}
       open={isSnackbarOpen}
-      autoHideDuration={3000}
+      autoHideDuration={2000}
       onClose={handleSnackbarClose}
     >
       <Alert severity='success'>
@@ -82,6 +81,3 @@ export function Layout() {
   </>);
 }
 
-function refreshMessages() {
-  throw new Error('Function not implemented.');
-}

@@ -9,10 +9,6 @@ export const themeOptions: ThemeOptions = {
     secondary: {
       main: '#ffa726',
     },
-    background: {
-      default: '#15151a',
-      paper: '#1d2b29',
-    },
     divider: '#485654',
   },
   spacing: 8,
@@ -50,14 +46,5 @@ export const themeOptions: ThemeOptions = {
     button: {
       fontFamily: 'PT Sans',
     },
-  },
-  components: {
-    MuiPaper: {
-      styleOverrides: {
-        "root": {
-          backgroundImage: 'none'
-        }
-      }
-    }
   }
 };

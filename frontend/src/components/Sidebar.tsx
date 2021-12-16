@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Home, Inbox, Mail, MenuBook } from '@mui/icons-material';
-import { List, ListItem, ListItemIcon, ListItemText, Divider, Button, Drawer } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
+import { Home, MenuBook } from '@mui/icons-material';
+import { List, ListItem, ListItemIcon, ListItemText, Drawer } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   open: boolean,

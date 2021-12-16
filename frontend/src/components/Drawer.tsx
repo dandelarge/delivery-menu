@@ -4,10 +4,8 @@ import { styled } from '@mui/material/styles';
 import { grey } from '@mui/material/colors';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import { ButtonGroup, Drawer } from '@mui/material';
+import { Drawer } from '@mui/material';
 import { useBottomDrawer } from '../providers/bottom-drawer-provider';
 import { useOrder } from '../providers/order-provider';
 
@@ -18,17 +16,11 @@ interface Props {
   window?: () => Window;
 }
 
-const Root = styled('div')(({ theme }) => ({
-  height: '100%',
-  backgroundColor:
-    theme.palette.mode === 'light' ? grey[100] : theme.palette.background.default,
-}));
-
 const StyledBox = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800],
 }));
 
-const DrawerHeading = styled(StyledBox)(({theme}) => ({
+const DrawerHeading = styled(StyledBox)({
   position: 'absolute',
   top: -drawerBleeding,
   borderTopLeftRadius: 8,
@@ -38,7 +30,7 @@ const DrawerHeading = styled(StyledBox)(({theme}) => ({
   left: 0,
   display: 'flex',
   flexDirection:'column'
-}));
+});
 
 const Puller = styled(Box)(({ theme }) => ({
   width: 30,
@@ -51,13 +43,11 @@ const Puller = styled(Box)(({ theme }) => ({
 }));
 
 export function SwipeableEdgeDrawer(props: Props) {
-  const { window } = props;
   const { total, hasChanges: hasOrderChanges } = useOrder();
 
   const {bottomDrawerOpen, openBottomDrawer, closeBottomDrawer} = useBottomDrawer();
 
-  // This is used only for the example
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container = document.body;
 
   return (
     <>
@@ -77,6 +67,7 @@ export function SwipeableEdgeDrawer(props: Props) {
         ModalProps={{
           keepMounted: true,
         }}
+        container={container}
       >
         <DrawerHeading
           onClick={openBottomDrawer}

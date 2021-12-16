@@ -1,7 +1,6 @@
-import { FormControl, TextField, Button, Card, CardContent } from '@mui/material';
 import React, { useState } from 'react'
+import { FormControl, TextField, Button, Card, CardContent } from '@mui/material';
 import { useNavigate } from 'react-router';
-import { client } from '../api-client';
 import { useMenu } from '../providers/menu-provider';
 import { useOrder } from '../providers/order-provider';
 import { useOrderWave } from '../providers/orderwave-provider';
@@ -72,7 +71,7 @@ export default function CreateMenu(): JSX.Element {
     }
 
     const lines: string[] = menuText.split('\n');
-    const regex = /(^.+[^\d^\.]|[^\d])([\d\.]{1,4}).?/;
+    const regex = /(^.+[^\d^.]|[^\d])([\d.]{1,4}).?/;
     const menuItems: MenuItem[] = lines
       .filter(line => regex.test(line))
       .map(line => {

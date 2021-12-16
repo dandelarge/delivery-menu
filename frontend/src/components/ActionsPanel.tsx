@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography, CardActions, Button, Stack } from '@mui/material';
+import { Card, CardContent, CardActions, Button, Stack } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { useAuth } from '../providers/auth-provider';
 import { useOrderWave } from '../providers/orderwave-provider';
