@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 import { useMenu } from '../providers/menu-provider';
 import { useOrder } from '../providers/order-provider';
 import { useOrderWave } from '../providers/orderwave-provider';
-import { MenuItem } from './Menu';
+import { MenuItem } from './Menu/Menu';
 
 const defaultInput = `
 WEED 🌲🌲 per G

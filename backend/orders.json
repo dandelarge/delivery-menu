@@ -144,10 +144,41 @@
                 "name": "mine",
                 "id": "4e08fb95-b19f-416a-8d57-c6b2f584fc5d"
             },
-            "items": [],
-            "total": 0,
+            "items": [
+                {
+                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "qty": 5,
+                    "subtotal": 60
+                },
+                {
+                    "item": "L.A. Confidential (indica)🌃🌃🌃",
+                    "qty": 5,
+                    "subtotal": 50
+                },
+                {
+                    "item": "Enemy of the States (indica)🥧🥧🥧",
+                    "qty": 5,
+                    "subtotal": 42.5
+                },
+                {
+                    "item": "Barbara Peach Triple Filtred 🍑🍑🍑 ",
+                    "qty": 6,
+                    "subtotal": 90
+                },
+                {
+                    "item": "Golden States Eggs Double Filtred 🍌🍌🍌",
+                    "qty": 6,
+                    "subtotal": 75
+                },
+                {
+                    "item": "Kit & Kat Double Filtred + Wax 🍫🍫🍫",
+                    "qty": 4,
+                    "subtotal": 54
+                }
+            ],
+            "total": 371.5,
             "created-at": "Thu Dec 16 2021 02:49:05 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Thu Dec 16 2021 02:59:23 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 16 2021 15:03:30 GMT+0100 (Central European Standard Time)",
             "id": "6d9f7a32-bef8-454e-9b29-7eddc874e639"
         },
         {
@@ -158,19 +189,46 @@
             "items": [
                 {
                     "item": "Blood Orange (hybrid)🍊🍊🍊",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Bacio Gelato (hybrid)🍨🍨🍨",
                     "qty": 5,
                     "subtotal": 60
                 },
                 {
-                    "item": "Bacio Gelato (hybrid)🍨🍨🍨",
-                    "qty": 6,
-                    "subtotal": 72
+                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "qty": 3,
+                    "subtotal": 36
+                },
+                {
+                    "item": "Mimosa (hybrid)🌾🌾🌾",
+                    "qty": 3,
+                    "subtotal": 33
                 }
             ],
-            "total": 132,
+            "total": 141,
             "created-at": "Thu Dec 16 2021 13:36:08 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Thu Dec 16 2021 13:36:08 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 16 2021 19:12:20 GMT+0100 (Central European Standard Time)",
             "id": "19766fa0-71e8-4191-bdef-7e8a6984d44c"
+        },
+        {
+            "user": {
+                "name": "Lucas",
+                "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
+            },
+            "items": [
+                {
+                    "item": "Shoreline (sativa)🍒🍒🍒",
+                    "qty": 7,
+                    "subtotal": 70
+                }
+            ],
+            "total": 70,
+            "created-at": "Thu Dec 16 2021 14:38:45 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Thu Dec 16 2021 14:38:45 GMT+0100 (Central European Standard Time)",
+            "id": "376fd1b1-6417-454c-b683-49be8ea4e004"
         }
     ]
 }

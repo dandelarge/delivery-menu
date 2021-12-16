@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { Box, Card, CardActions, CardContent, IconButton, Paper, Popover, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
-import { Add, Check, Delete, Remove } from '@mui/icons-material';
-import { useOrder } from '../providers/order-provider';
-import { useMenu } from '../providers/menu-provider';
+import { IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import { Add, Remove } from '@mui/icons-material';
+import { useOrder } from '../../providers/order-provider';
+import { useMenu } from '../../providers/menu-provider';
+import EditPopover from './EditPopover';
 
 export interface MenuItem {
   name: string;
@@ -49,26 +50,17 @@ export const Menu = () => {
 
   const { summaryMap, updateSummaryAndTotal } = useOrder() || [];
 
-  const [open, setOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [currentItem, setCurrentItem] = React.useState('');
+  const [qtyInputValue, setQtyInputValue] = React.useState(summaryMap.get(currentItem));
 
   const handleClick = (event: React.MouseEvent<HTMLElement>, setAnchor: boolean) => {
     if (setAnchor) setAnchorEl(event.currentTarget);
-    setOpen(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  }
-
-  const canBeOpen = open && Boolean(anchorEl);
-  const id = canBeOpen ? 'transition-popper' : undefined;
-
   useEffect(() => {
-    console.log(priceMap);
-  }, [priceMap])
-
+    setQtyInputValue(summaryMap.get(currentItem));
+  }, [currentItem])
 
   function handleRemoveButtonClick(name: string) {
     setCurrentItem(name);
@@ -78,6 +70,7 @@ export const Menu = () => {
     }
 
     summaryMap.set(name, existingSummary - 1);
+    setQtyInputValue(summaryMap.get(name));
     updateSummaryAndTotal(priceMap);
   }
 
@@ -85,63 +78,34 @@ export const Menu = () => {
     setCurrentItem(name);
     const existingSummary = summaryMap.get(name) || 0;
     summaryMap.set(name, existingSummary + 1);
+    setQtyInputValue(summaryMap.get(name));
     updateSummaryAndTotal(priceMap);
   }
 
   function handleDeleteButtonClick(name: string) {
     summaryMap.set(name, 0);
     updateSummaryAndTotal(priceMap);
-    handleClose();
+  }
+
+  function handleQtyInputChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const value = parseInt(event.currentTarget.value);
+    setQtyInputValue(value);
+    summaryMap.set(currentItem, value);
+    updateSummaryAndTotal(priceMap);
   }
 
   return (<>
-    <Popover
-      id={id}
-      open={open}
+    <EditPopover
       anchorEl={anchorEl}
-      onClose={handleClose}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'left',
-      }}
-    >
-      <Card>
-        <CardContent>
-          <Typography variant="subtitle1">{currentItem}</Typography>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              mt: 2,
-              alignItems: 'center'
-            }}
-          >
-            <IconButton onClick={() => handleDeleteButtonClick(currentItem)}>
-              <Delete />
-            </IconButton>
-            <Box sx={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center'
-            }}>
-              <IconButton onClick={(e) => { handleRemoveButtonClick(currentItem); handleClick(e, false) }} color="secondary">
-                <Remove></Remove>
-              </IconButton>
-              <Typography variant="subtitle1" sx={{ mx: 1 }} color="primary">{summaryMap.get(currentItem) || 0} g</Typography>
-              <IconButton onClick={(e) => { handleAddButtonClick(currentItem); handleClick(e, false) }} color="secondary">
-                <Add></Add>
-              </IconButton>
-            </Box>
-          </Box>
-        </CardContent>
-        <CardActions>
-            <IconButton sx={{ml:'auto'}} color="success" onClick={handleClose} size="large">
-              <Check></Check>
-            </IconButton>
-        </CardActions>
-      </Card>
-    </Popover>
-    <Typography variant='h6' sx={{ mt: 2, mb: 2 }}>Menu 🍀🍀🍀</Typography>
+      currentItem={currentItem}
+      qtyInputValue={qtyInputValue}
+      handleAddButtonClick={handleAddButtonClick}
+      handleRemoveButtonClick={handleRemoveButtonClick}
+      handleDeleteButtonClick={handleDeleteButtonClick}
+      handleClick={handleClick}
+      handleChange={handleQtyInputChange}
+    />
+    <Typography variant='h6' sx={{ my: 2 }}>Menu 🍀🍀🍀</Typography>
 
     <TableContainer component={Paper}>
       <Table>

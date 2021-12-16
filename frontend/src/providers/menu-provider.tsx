@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { client } from "../api-client";
-import { MenuItem } from "../components/Menu";
+import { MenuItem } from "../components/Menu/Menu";
 
 interface MenuContextType {
   items: MenuItem[];

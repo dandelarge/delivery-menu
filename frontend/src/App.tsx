@@ -4,7 +4,7 @@ import { appTheme } from './theme';
 import { Routes, Route, Outlet, BrowserRouter } from 'react-router-dom';
 import { Login } from './components/Login';
 import { Users } from './components/Users';
-import { Menu } from './components/Menu';
+import { Menu } from './components/Menu/Menu';
 import { Layout } from './components/Layout';
 import { HomePage } from './components/HomePage';
 import { AuthProvider } from './providers/auth-provider';
