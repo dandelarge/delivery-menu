@@ -449,36 +449,6 @@
             "order_before": "2021-12-15T15:08:04.013Z",
             "summary": [
                 {
-                    "item": "Zookies (hybrid)🥮🥮🥮",
-                    "qty": 8,
-                    "subtotal": 96
-                },
-                {
-                    "item": "L.A. Confidential (indica)🌃🌃🌃",
-                    "qty": 5,
-                    "subtotal": 50
-                },
-                {
-                    "item": "Enemy of the States (indica)🥧🥧🥧",
-                    "qty": 5,
-                    "subtotal": 42.5
-                },
-                {
-                    "item": "Barbara Peach Triple Filtred 🍑🍑🍑 ",
-                    "qty": 6,
-                    "subtotal": 90
-                },
-                {
-                    "item": "Golden States Eggs Double Filtred 🍌🍌🍌",
-                    "qty": 6,
-                    "subtotal": 75
-                },
-                {
-                    "item": "Kit & Kat Double Filtred + Wax 🍫🍫🍫",
-                    "qty": 4,
-                    "subtotal": 54
-                },
-                {
                     "item": "Blood Orange (hybrid)🍊🍊🍊",
                     "qty": 1,
                     "subtotal": 12
@@ -489,19 +459,24 @@
                     "subtotal": 60
                 },
                 {
+                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "qty": 3,
+                    "subtotal": 36
+                },
+                {
                     "item": "Mimosa (hybrid)🌾🌾🌾",
                     "qty": 3,
                     "subtotal": 33
                 },
                 {
-                    "item": "Shoreline (sativa)🍒🍒🍒",
-                    "qty": 7,
-                    "subtotal": 70
+                    "item": "Mimozz (hybrid)🍭🍭🍭",
+                    "qty": 4,
+                    "subtotal": 48
                 }
             ],
-            "total": 582.5,
+            "total": 189,
             "created-at": "Wed Dec 15 2021 16:08:05 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Thu Dec 16 2021 19:12:20 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 20 2021 05:39:31 GMT+0100 (Central European Standard Time)",
             "id": "850d0e02-897e-4c3e-927a-66facdb69e00",
             "orders": {},
             "menu": {
@@ -520,51 +495,6 @@
                         "id": "Zookies (hybrid)🥮🥮🥮12€",
                         "name": "Zookies (hybrid)🥮🥮🥮",
                         "price": 12
-                    },
-                    {
-                        "id": "Bacio Gelato (hybrid)🍨🍨🍨12€",
-                        "name": "Bacio Gelato (hybrid)🍨🍨🍨",
-                        "price": 12
-                    },
-                    {
-                        "id": "Mimosa (hybrid)🌾🌾🌾11€",
-                        "name": "Mimosa (hybrid)🌾🌾🌾",
-                        "price": 11
-                    },
-                    {
-                        "id": "Gorilla Zkittlez (hybrid) 🦍🍊🦍11€",
-                        "name": "Gorilla Zkittlez (hybrid) 🦍🍊🦍",
-                        "price": 11
-                    },
-                    {
-                        "id": "Melonade (sativa)🍉🍉🍉10€",
-                        "name": "Melonade (sativa)🍉🍉🍉",
-                        "price": 10
-                    },
-                    {
-                        "id": "Strawberry Kush (indica)🍓🍓🍓10€",
-                        "name": "Strawberry Kush (indica)🍓🍓🍓",
-                        "price": 10
-                    },
-                    {
-                        "id": "L.A. Confidential (indica)🌃🌃🌃10€",
-                        "name": "L.A. Confidential (indica)🌃🌃🌃",
-                        "price": 10
-                    },
-                    {
-                        "id": "Shoreline (sativa)🍒🍒🍒10€",
-                        "name": "Shoreline (sativa)🍒🍒🍒",
-                        "price": 10
-                    },
-                    {
-                        "id": "Somari (indica)🥧🥧🥧9€",
-                        "name": "Somari (indica)🥧🥧🥧",
-                        "price": 9
-                    },
-                    {
-                        "id": "Miss Cookies (hybrid)🍪👸🍪9€",
-                        "name": "Miss Cookies (hybrid)🍪👸🍪",
-                        "price": 9
                     },
                     {
                         "id": "Guanabana #2 (hybrid) 🍈🍈🍈9€",
@@ -701,39 +631,24 @@
                         },
                         "items": [
                             {
+                                "item": "Blood Orange (hybrid)🍊🍊🍊",
+                                "qty": 1,
+                                "subtotal": 12
+                            },
+                            {
                                 "item": "Zookies (hybrid)🥮🥮🥮",
-                                "qty": 5,
-                                "subtotal": 60
+                                "qty": 3,
+                                "subtotal": 36
                             },
                             {
-                                "item": "L.A. Confidential (indica)🌃🌃🌃",
-                                "qty": 5,
-                                "subtotal": 50
-                            },
-                            {
-                                "item": "Enemy of the States (indica)🥧🥧🥧",
-                                "qty": 5,
-                                "subtotal": 42.5
-                            },
-                            {
-                                "item": "Barbara Peach Triple Filtred 🍑🍑🍑 ",
-                                "qty": 6,
-                                "subtotal": 90
-                            },
-                            {
-                                "item": "Golden States Eggs Double Filtred 🍌🍌🍌",
-                                "qty": 6,
-                                "subtotal": 75
-                            },
-                            {
-                                "item": "Kit & Kat Double Filtred + Wax 🍫🍫🍫",
+                                "item": "Mimozz (hybrid)🍭🍭🍭",
                                 "qty": 4,
-                                "subtotal": 54
+                                "subtotal": 48
                             }
                         ],
-                        "total": 371.5,
+                        "total": 96,
                         "created-at": "Thu Dec 16 2021 02:49:05 GMT+0100 (Central European Standard Time)",
-                        "last-updated": "Thu Dec 16 2021 15:03:30 GMT+0100 (Central European Standard Time)",
+                        "last-updated": "Mon Dec 20 2021 05:39:16 GMT+0100 (Central European Standard Time)",
                         "id": "6d9f7a32-bef8-454e-9b29-7eddc874e639"
                     }
                 ],
@@ -744,28 +659,7 @@
                             "name": "Dani",
                             "id": "11292c63-e903-454e-9988-46c069fd98e8"
                         },
-                        "items": [
-                            {
-                                "item": "Blood Orange (hybrid)🍊🍊🍊",
-                                "qty": 1,
-                                "subtotal": 12
-                            },
-                            {
-                                "item": "Bacio Gelato (hybrid)🍨🍨🍨",
-                                "qty": 5,
-                                "subtotal": 60
-                            },
-                            {
-                                "item": "Zookies (hybrid)🥮🥮🥮",
-                                "qty": 3,
-                                "subtotal": 36
-                            },
-                            {
-                                "item": "Mimosa (hybrid)🌾🌾🌾",
-                                "qty": 3,
-                                "subtotal": 33
-                            }
-                        ],
+                        "items": [],
                         "total": 141,
                         "created-at": "Thu Dec 16 2021 13:36:08 GMT+0100 (Central European Standard Time)",
                         "last-updated": "Thu Dec 16 2021 19:12:20 GMT+0100 (Central European Standard Time)",
@@ -779,13 +673,7 @@
                             "name": "Lucas",
                             "id": "cf4e1585-aa23-4645-8edd-1f16b09e1d7e"
                         },
-                        "items": [
-                            {
-                                "item": "Shoreline (sativa)🍒🍒🍒",
-                                "qty": 7,
-                                "subtotal": 70
-                            }
-                        ],
+                        "items": [],
                         "total": 70,
                         "created-at": "Thu Dec 16 2021 14:38:45 GMT+0100 (Central European Standard Time)",
                         "last-updated": "Thu Dec 16 2021 14:38:45 GMT+0100 (Central European Standard Time)",

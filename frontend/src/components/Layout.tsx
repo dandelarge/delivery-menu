@@ -35,7 +35,7 @@ export function Layout() {
       height: '100vh',
       display: 'flex',
       flexDirection: 'column',
-      backgroundImage: 'url(/psychedelyc.jpg)'
+      backgroundImage: 'url(/tacostest.jpg)'
     }}>
       <Sidebar open={isSidebarOpen} onClose={() => toggleSidebar(false)}></Sidebar>
       <AppBar position="sticky" color="secondary">

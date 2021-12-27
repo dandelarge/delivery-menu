@@ -18,7 +18,7 @@ export class MenuController {
     }
     menu.items = createMenuDto.items;
     this.orderwaveService.addOrUpdateMenu(id, menu);
-    this.orderwaveService.resetOrders(id);
+    this.orderwaveService.updateOrdersWithNewMenu(id, menu);
     return menu;
   }
 

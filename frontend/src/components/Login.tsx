@@ -40,10 +40,12 @@ export const Login = () => {
     if (auth.authenticated) {
       navigate(from, { replace: true });
     }
-    setSeverity('success');
+   if (auth.authenticated === false){
+     setSeverity('success');
     setAlertText('See you Soon 🐒');
     setMessageDuration(2000);
     setIsSnackbarOpen(true);
+  }
   }, [auth.authenticated, navigate, from]);
 
   useEffect(() => {

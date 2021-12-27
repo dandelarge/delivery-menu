@@ -146,39 +146,34 @@
             },
             "items": [
                 {
-                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "item": "Blood Orange (hybrid)🍊🍊🍊",
+                    "qty": 1,
+                    "subtotal": 12
+                },
+                {
+                    "item": "Bacio Gelato (hybrid)🍨🍨🍨",
                     "qty": 5,
                     "subtotal": 60
                 },
                 {
-                    "item": "L.A. Confidential (indica)🌃🌃🌃",
-                    "qty": 5,
-                    "subtotal": 50
+                    "item": "Zookies (hybrid)🥮🥮🥮",
+                    "qty": 3,
+                    "subtotal": 36
                 },
                 {
-                    "item": "Enemy of the States (indica)🥧🥧🥧",
-                    "qty": 5,
-                    "subtotal": 42.5
+                    "item": "Mimosa (hybrid)🌾🌾🌾",
+                    "qty": 3,
+                    "subtotal": 33
                 },
                 {
-                    "item": "Barbara Peach Triple Filtred 🍑🍑🍑 ",
-                    "qty": 6,
-                    "subtotal": 90
-                },
-                {
-                    "item": "Golden States Eggs Double Filtred 🍌🍌🍌",
-                    "qty": 6,
-                    "subtotal": 75
-                },
-                {
-                    "item": "Kit & Kat Double Filtred + Wax 🍫🍫🍫",
+                    "item": "Mimozz (hybrid)🍭🍭🍭",
                     "qty": 4,
-                    "subtotal": 54
+                    "subtotal": 48
                 }
             ],
-            "total": 371.5,
+            "total": 189,
             "created-at": "Thu Dec 16 2021 02:49:05 GMT+0100 (Central European Standard Time)",
-            "last-updated": "Thu Dec 16 2021 15:03:30 GMT+0100 (Central European Standard Time)",
+            "last-updated": "Mon Dec 20 2021 05:39:16 GMT+0100 (Central European Standard Time)",
             "id": "6d9f7a32-bef8-454e-9b29-7eddc874e639"
         },
         {

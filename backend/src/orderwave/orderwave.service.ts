@@ -117,11 +117,43 @@ export class OrderWaveService {
     return orderWave;
   }
 
+  updateOrdersWithNewMenu(id: string, menu: MenuModel): OrderWave {
+    const orderWave = this.findOne(id) as OrderWave;
+    const menuMap = new Map<string, number>();
+    menu.items?.forEach(({name, price}) => {
+      menuMap.set(name, price);
+    });
+
+    const rawOrders = orderWave.rawOrders || [];
+    const orderMap = new Map(rawOrders);
+
+    orderMap.forEach( order => {
+      const updatedItems = order.items
+        .filter( ({item}) => menuMap.get(item))
+        .map( ({item, qty}) => ({
+          item,
+          qty,
+          subtotal: qty * menuMap.get(item)
+        }));
+      const total = updatedItems.reduce((prev, curr) => prev + curr.subtotal, 0);
+      const updatedOder = {...order, items: updatedItems, total };
+      if (total > 0) orderMap.set(order.user.id, updatedOder);
+    });
+
+    const updatedOrdersRaw = Array.from(orderMap);
+    const genOrderWave = { ...orderWave, rawOrders: updatedOrdersRaw };
+
+    const updatedOrderWave = this.db.update('order-waves', genOrderWave, id, 'id') as OrderWave;
+    updatedOrderWave.orders = new Map<string, OrderModel>(updatedOrdersRaw);
+
+    return updatedOrderWave;
+  }
+
   resetOrders(id: string): OrderWave {
     const orderWave = this.findOne(id) as OrderWave;
     orderWave.rawOrders = [];
     orderWave.summary = [];
-    orderWave. total = 0;
+    orderWave.total = 0;
 
     const updatedOrderWave = this.db.update('order-waves', orderWave, id, 'id') as OrderWave;
     updatedOrderWave.orders = new Map<string, OrderModel>();
